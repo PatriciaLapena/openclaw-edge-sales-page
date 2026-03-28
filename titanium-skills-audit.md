@@ -4,6 +4,8 @@
 1. MintBird
 2. CourseSprout
 3. Letterman
+4. Quizforma
+5. Global Control
 
 ## Summary
 The good news: Patricia already has the key ingredients needed for these tools — zip packages and valid API keys.
@@ -78,10 +80,49 @@ Letterman can likely be used soon for article/publication workflows, with draft-
   - `credentials/coursesprout.txt`
   - `credentials/titanium-api-keys.txt`
 
+### 4) Quizforma
+**API key test:** PASS  
+**Read-only connectivity:** PASS (`GET /quiz/get` returned success)
+
+**Audit findings:**
+- Uploaded package is relatively clean and concise.
+- Contains a usable `SKILL.md` plus a prompt/template file.
+- Authentication and base URL are documented clearly enough for practical use.
+- Better quality than MintBird package.
+
+**Setup status:**
+- API key confirmed working.
+- Package unpacked for review.
+- Strong candidate for operational use once wrapped into a cleaner local workflow.
+
+**Recommendation:**
+Quizforma is viable for quiz inventory, creation planning, and eventual quiz-building workflows.
+
+### 5) Global Control
+**API key test:** PASS  
+**Read-only connectivity:** PASS (`GET /users/me` returned authenticated account data)
+
+**Audit findings:**
+- Package is substantial and includes a real `SKILL.md`, references, endpoint maps, and wrapper planning.
+- Needed fallback extraction because zip used Windows-style backslashes internally.
+- Live auth succeeded.
+- Important caution: authenticated user response includes sensitive fields, so responses must be redacted carefully.
+- Broadcast documentation appears mixed: package includes send-broadcast workflow, but one reference notes some broadcast endpoints may fail and require workflow/tag-trigger workarounds.
+
+**Setup status:**
+- API key confirmed working.
+- Package unpacked for review.
+- Usable for safe read operations and likely usable for contact/tag/workflow operations with confirmation gates.
+
+**Recommendation:**
+Global Control is one of the more promising Titanium skills, but should be operated with strong redaction and explicit confirmation on writes.
+
 ## Practical Conclusion
 ### Ready now
 - CourseSprout: close
 - Letterman: close
+- Quizforma: close
+- Global Control: close
 - MintBird: API works, but package needs cleanup before trusted autonomous use
 
 ### Still missing for true plug-and-play use
