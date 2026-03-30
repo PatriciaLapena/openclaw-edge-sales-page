@@ -101,6 +101,10 @@ Use these images as brand inspiration/reference:
     - Women with raised arms at sunrise/city overlook
     - Empowerment, triumph, collective strength, victory, momentum, women rising together
 
+24. `/root/.openclaw/media/inbound/file_91---08932163-0cd6-427c-bc93-a4aeca60e016.jpg`
+    - Mature women doing yoga/stretching together indoors
+    - Mobility, strength, graceful aging, friendship, active wellness, supportive movement
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
