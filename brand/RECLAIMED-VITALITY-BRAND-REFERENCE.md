@@ -61,6 +61,10 @@ Use these images as brand inspiration/reference:
     - Sunflower field / radiant renewal imagery
     - Warmth, optimism, blooming, sunlight, aliveness, feminine freedom
 
+14. `/root/.openclaw/media/inbound/file_81---35f2a70c-7d3c-4b4d-92c9-e12a6eca4e81.jpg`
+    - Beach-walk friendship imagery with mature women
+    - Sisterhood, ease, freedom, real-life joy, relaxed vitality, belonging
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
