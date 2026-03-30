@@ -57,6 +57,10 @@ Use these images as brand inspiration/reference:
     - Nature path / peaceful journey imagery
     - Fresh start, forward movement, healing path, calm outdoor renewal
 
+13. `/root/.openclaw/media/inbound/file_80---585a6e0f-e931-407a-84af-718fa7ffbd53.jpg`
+    - Sunflower field / radiant renewal imagery
+    - Warmth, optimism, blooming, sunlight, aliveness, feminine freedom
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
