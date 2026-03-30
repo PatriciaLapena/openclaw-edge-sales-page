@@ -73,6 +73,10 @@ Use these images as brand inspiration/reference:
     - Friendship/community typography image
     - Friendship, support, colorful connection, togetherness, approachable community energy
 
+17. `/root/.openclaw/media/inbound/file_84---eb9a2bfc-136a-43ca-acb9-ef9289558925.jpg`
+    - Feminine desk/flowers motivation image
+    - Elegant productivity, intentional action, beauty with purpose, “make it happen” energy
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
