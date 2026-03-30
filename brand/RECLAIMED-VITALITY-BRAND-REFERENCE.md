@@ -89,6 +89,10 @@ Use these images as brand inspiration/reference:
     - Coffee/notebook lifestyle image
     - Reflection, journaling, thoughtful planning, cozy intentionality, gentle productivity
 
+21. `/root/.openclaw/media/inbound/file_88---4b571b13-2e1a-4f89-b113-ef6908829f88.jpg`
+    - Watering can with bright flowers/sunflowers
+    - Blooming, care, nourishment, gardening, joyful color, tending growth over time
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
