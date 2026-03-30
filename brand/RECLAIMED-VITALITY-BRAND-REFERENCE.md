@@ -49,6 +49,10 @@ Use these images as brand inspiration/reference:
     - Balance / grounding / centered living / calm strength
     - Adds maturity, steadiness, wisdom
 
+11. `/root/.openclaw/media/inbound/file_78---29eec2f2-9c1b-4269-b1e3-999f6af73833.jpg`
+    - Active wellness / group movement / yoga-style vitality
+    - Healthy aging, mobility, breath, strength, and communal wellness
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
