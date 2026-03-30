@@ -85,6 +85,10 @@ Use these images as brand inspiration/reference:
     - Green juice / produce wellness image
     - Fresh nutrition, cleansing energy, practical healthy choices, vibrant nourishment
 
+20. `/root/.openclaw/media/inbound/file_87---fa3c177a-fa4e-44a7-b35c-33bba5840ff7.jpg`
+    - Coffee/notebook lifestyle image
+    - Reflection, journaling, thoughtful planning, cozy intentionality, gentle productivity
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
