@@ -65,6 +65,10 @@ Use these images as brand inspiration/reference:
     - Beach-walk friendship imagery with mature women
     - Sisterhood, ease, freedom, real-life joy, relaxed vitality, belonging
 
+15. `/root/.openclaw/media/inbound/file_82---d423ce87-a627-4e95-ab15-3213ab3f85ba.jpg`
+    - Heart-hands imagery against sky/water background
+    - Love, care, support, openness, heart-centered wellness, simple human warmth
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
