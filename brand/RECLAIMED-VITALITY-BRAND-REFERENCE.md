@@ -77,6 +77,10 @@ Use these images as brand inspiration/reference:
     - Feminine desk/flowers motivation image
     - Elegant productivity, intentional action, beauty with purpose, “make it happen” energy
 
+18. `/root/.openclaw/media/inbound/file_85---2a05ffc1-a272-4766-8e98-4ef08716ff13.jpg`
+    - Stylish joyful mature-woman portrait
+    - Confidence, beauty after 60, vibrant femininity, self-expression, smiling vitality
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
