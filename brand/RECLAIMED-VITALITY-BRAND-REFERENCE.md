@@ -93,6 +93,10 @@ Use these images as brand inspiration/reference:
     - Watering can with bright flowers/sunflowers
     - Blooming, care, nourishment, gardening, joyful color, tending growth over time
 
+22. `/root/.openclaw/media/inbound/file_89---3998320b-0e66-40ca-9813-31c4adc38cfa.jpg`
+    - Tropical beach hammock serenity image
+    - Rest, restoration, peace, spaciousness, calm escape, deep exhale, ease
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
