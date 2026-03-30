@@ -107,6 +107,7 @@ Use these images as brand inspiration/reference:
 
 25. `/root/.openclaw/media/inbound/file_92---d21cb862-edaa-47d2-a393-45e1ab12be4a.jpg`
     - Founders/team photo with Reclaimed Vitality screen and current logo/tagline
+    - Patricia, Joanne, and Sue together
     - Real women behind the brand, warmth, trust, approachability, community leadership, authentic founder presence
 
 ## Core Brand Essence
