@@ -53,6 +53,10 @@ Use these images as brand inspiration/reference:
     - Active wellness / group movement / yoga-style vitality
     - Healthy aging, mobility, breath, strength, and communal wellness
 
+12. `/root/.openclaw/media/inbound/file_79---b8ad773b-d6c2-4362-a109-76f958a38a5e.jpg`
+    - Nature path / peaceful journey imagery
+    - Fresh start, forward movement, healing path, calm outdoor renewal
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
