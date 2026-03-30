@@ -69,6 +69,10 @@ Use these images as brand inspiration/reference:
     - Heart-hands imagery against sky/water background
     - Love, care, support, openness, heart-centered wellness, simple human warmth
 
+16. `/root/.openclaw/media/inbound/file_83---9cfa3672-a8bf-4b96-98f2-bfed5303a2a3.jpg`
+    - Friendship/community typography image
+    - Friendship, support, colorful connection, togetherness, approachable community energy
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
