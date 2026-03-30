@@ -97,6 +97,10 @@ Use these images as brand inspiration/reference:
     - Tropical beach hammock serenity image
     - Rest, restoration, peace, spaciousness, calm escape, deep exhale, ease
 
+23. `/root/.openclaw/media/inbound/file_90---46f95db1-6d7f-436c-a3e9-de24ca8d5efa.jpg`
+    - Women with raised arms at sunrise/city overlook
+    - Empowerment, triumph, collective strength, victory, momentum, women rising together
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
