@@ -81,6 +81,10 @@ Use these images as brand inspiration/reference:
     - Stylish joyful mature-woman portrait
     - Confidence, beauty after 60, vibrant femininity, self-expression, smiling vitality
 
+19. `/root/.openclaw/media/inbound/file_86---ff03c06b-139c-4990-b91c-4c4be00702b5.jpg`
+    - Green juice / produce wellness image
+    - Fresh nutrition, cleansing energy, practical healthy choices, vibrant nourishment
+
 ## Core Brand Essence
 
 Reclaimed Vitality should feel like:
