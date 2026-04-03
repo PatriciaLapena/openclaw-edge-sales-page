@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Your Next Chapter | Reclaimed Vitality</title>
+  <style>
+    :root {
+      --blush: #f6e6ea;
+      --rose: #c68aa0;
+      --mauve: #8c6074;
+      --lavender: #e9deef;
+      --cream: #fffaf7;
+      --charcoal: #3e363a;
+      --gold: #d8b46a;
+      --line: #e7d5dc;
+      --white: #ffffff;
+      --shadow: 0 12px 30px rgba(111, 75, 93, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--charcoal);
+      background:
+        radial-gradient(circle at top left, rgba(233, 222, 239, 0.65), transparent 24%),
+        radial-gradient(circle at top right, rgba(246, 230, 234, 0.9), transparent 28%),
+        linear-gradient(180deg, #fffdfb 0%, #fff7f4 100%);
+      line-height: 1.65;
+    }
+
+    .hero {
+      padding: 72px 24px 40px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.76);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 28px;
+      padding: 44px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--blush);
+      color: var(--mauve);
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.1;
+      color: var(--mauve);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 18px auto 0;
+      font-size: 1.12rem;
+      color: #5a4c53;
+    }
+
+    .signature {
+      margin-top: 18px;
+      color: #8f7480;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px 72px;
+    }
+
+    .section {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(226, 208, 216, 0.9);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      color: var(--mauve);
+      font-size: 1.7rem;
+      margin: 0 0 10px;
+    }
+
+    h3 {
+      color: #7a5667;
+      font-size: 1.15rem;
+      margin: 0 0 10px;
+    }
+
+    .lede {
+      color: #66575f;
+      margin-top: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #fffefe 0%, #fff7fa 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.98rem;
+      color: #614f57;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      border: 1px solid #dcc6d1;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font: inherit;
+      color: var(--charcoal);
+      background: #fffdfd;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--rose);
+      box-shadow: 0 0 0 4px rgba(198, 138, 160, 0.15);
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .money-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fff7f8 100%);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .money-card small {
+      display: block;
+      color: #8b7880;
+      margin-top: 6px;
+      font-size: 0.84rem;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .result-box {
+      background: linear-gradient(180deg, #fffaf6 0%, #fff 100%);
+      border: 1px solid #ecd8c3;
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .result-box .label {
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #8c6f58;
+    }
+
+    .result-box .value {
+      display: block;
+      margin-top: 8px;
+      font-size: 1.35rem;
+      color: var(--mauve);
+      font-weight: bold;
+    }
+
+    .cta-band {
+      background: linear-gradient(135deg, #f6e6ea 0%, #fdf7f2 50%, #efe7f5 100%);
+      border: 1px solid #ead6de;
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font: inherit;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+
+    .primary {
+      background: var(--mauve);
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: var(--mauve);
+      border: 1px solid #dcbfcc;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #8d7b84;
+      font-size: 0.95rem;
+      margin-top: 26px;
+    }
+
+    @media (max-width: 900px) {
+      .grid,
+      .calculator-grid,
+      .results {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding-top: 48px; }
+      .section { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Reclaimed Vitality</div>
+      <h1>Design Your Next Chapter</h1>
+      <p>A beautiful online workbook for women 60+ to reflect on the life they want now — and gently see what it may take to support it.</p>
+      <p class="signature">By Patricia Lapena</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Welcome</h2>
+      <p class="lede">This is a place to dream honestly. Not from fear. Not from “being realistic.” But from the wiser, deeper part of you that still knows there is more available.</p>
+      <p>You do not need to complete everything perfectly. Let this be thoughtful, gentle, and true.</p>
+    </section>
+
+    <section class="section">
+      <h2>Your Next Chapter Vision</h2>
+      <div class="grid">
+        <div class="card">
+          <label for="homeVision">1. Home & Environment</label>
+          <textarea id="homeVision" placeholder="What kind of home feels beautiful, peaceful, and supportive in this next chapter?"></textarea>
+        </div>
+        <div class="card">
+          <label for="healthVision">2. Health, Energy & Vitality</label>
+          <textarea id="healthVision" placeholder="How do you want to feel physically and emotionally day to day?"></textarea>
+        </div>
+        <div class="card">
+          <label for="travelVision">3. Travel, Experiences & Adventure</label>
+          <textarea id="travelVision" placeholder="Where do you want to go? What experiences still matter to you?"></textarea>
+        </div>
+        <div class="card">
+          <label for="dailyVision">4. Nourishment & Daily Living</label>
+          <textarea id="dailyVision" placeholder="What would daily life, nourishment, and ease look like for you?"></textarea>
+        </div>
+        <div class="card">
+          <label for="freedomVision">5. Freedom, Time & Space</label>
+          <textarea id="freedomVision" placeholder="How do you want your days to feel? What are you ready to release?"></textarea>
+        </div>
+        <div class="card">
+          <label for="supportVision">6. Beauty, Self-Care & Support</label>
+          <textarea id="supportVision" placeholder="What kind of support, self-care, beauty, or help would make life feel lighter?"></textarea>
+        </div>
+        <div class="card">
+          <label for="communityVision">7. Relationships, Community & Contribution</label>
+          <textarea id="communityVision" placeholder="What kind of relationships and community do you want around you?"></textarea>
+        </div>
+        <div class="card">
+          <label for="purposeVision">8. Purpose, Passion & Possibility</label>
+          <textarea id="purposeVision" placeholder="What still wants to come through you in this season of life?"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What Would Support This Life?</h2>
+      <div class="card">
+        <label for="supportNeeds">Reflect gently</label>
+        <textarea id="supportNeeds" placeholder="What support, habits, community, resources, or income would help make this life sustainable?"></textarea>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Your Gentle Lifestyle Numbers</h2>
+      <p class="lede">If you want, you can enter your monthly numbers below. The totals will calculate automatically. This is not about pressure. It is about clarity.</p>
+
+      <div class="calculator-grid">
+        <div class="money-card">
+          <label for="homeCost">Home</label>
+          <input class="money-input" id="homeCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Mortgage, rent, condo fees, or dream-home cost</small>
+        </div>
+        <div class="money-card">
+          <label for="transportCost">Transportation</label>
+          <input class="money-input" id="transportCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Vehicle payment, gas, car service, or transit</small>
+        </div>
+        <div class="money-card">
+          <label for="foodCost">Food & Dining</label>
+          <input class="money-input" id="foodCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Groceries, dining out, meal support</small>
+        </div>
+        <div class="money-card">
+          <label for="travelCost">Travel</label>
+          <input class="money-input" id="travelCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Trips, weekends away, retreats, vacations</small>
+        </div>
+        <div class="money-card">
+          <label for="wellnessCost">Wellness & Self-Care</label>
+          <input class="money-input" id="wellnessCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Massage, supplements, treatments, beauty, wellness care</small>
+        </div>
+        <div class="money-card">
+          <label for="supportCost">Support</label>
+          <input class="money-input" id="supportCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>House help, coaching, cleaning, assistant, chef, other support</small>
+        </div>
+        <div class="money-card">
+          <label for="familyCost">Giving / Family</label>
+          <input class="money-input" id="familyCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Helping family, gifts, legacy giving, generosity</small>
+        </div>
+        <div class="money-card">
+          <label for="investCost">Savings / Investments</label>
+          <input class="money-input" id="investCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Retirement, investing, wealth-building</small>
+        </div>
+        <div class="money-card">
+          <label for="lifestyleCost">Fun / Beauty / Lifestyle</label>
+          <input class="money-input" id="lifestyleCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Clothing, hobbies, entertainment, pleasure, little luxuries</small>
+        </div>
+        <div class="money-card">
+          <label for="otherCost">Other</label>
+          <input class="money-input" id="otherCost" type="number" min="0" step="0.01" placeholder="0.00" />
+          <small>Anything else you want included</small>
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="result-box">
+          <span class="label">Per Month</span>
+          <span class="value" id="monthlyTotal">$0.00</span>
+        </div>
+        <div class="result-box">
+          <span class="label">Per Year</span>
+          <span class="value" id="yearlyTotal">$0.00</span>
+        </div>
+        <div class="result-box">
+          <span class="label">Per Week</span>
+          <span class="value" id="weeklyTotal">$0.00</span>
+        </div>
+        <div class="result-box">
+          <span class="label">Per Day</span>
+          <span class="value" id="dailyTotal">$0.00</span>
+        </div>
+        <div class="result-box">
+          <span class="label">Per Hour</span>
+          <span class="value" id="hourlyTotal">$0.00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <h2>What This Might Be Showing You</h2>
+      <p>You may be realizing that you want more than you’ve been admitting. More energy. More peace. More beauty. More support. More freedom. More possibility.</p>
+      <p>If this exercise helped you see that you want more vitality, clarity, confidence, and community in this next chapter, <strong>Reclaimed Vitality</strong> is the place to begin.</p>
+      <p>And if this also showed you that the life you want will need stronger financial support, then <strong>Sister Wealth Creators</strong> becomes a natural next conversation.</p>
+
+      <div class="actions">
+        <button class="primary" onclick="window.print()">Print / Save this page</button>
+        <button class="secondary" onclick="clearForm()">Clear my entries</button>
+      </div>
+    </section>
+
+    <p class="footer-note">A beautiful next chapter does not begin when everything is perfect. It begins when you tell yourself the truth about what you want — and decide you are still allowed to have it.</p>
+  </main>
+
+  <script>
+    const inputs = Array.from(document.querySelectorAll('.money-input'));
+    const ids = {
+      monthly: document.getElementById('monthlyTotal'),
+      yearly: document.getElementById('yearlyTotal'),
+      weekly: document.getElementById('weeklyTotal'),
+      daily: document.getElementById('dailyTotal'),
+      hourly: document.getElementById('hourlyTotal')
+    };
+
+    function money(n) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
+    }
+
+    function calculate() {
+      const monthly = inputs.reduce((sum, input) => sum + (parseFloat(input.value) || 0), 0);
+      const yearly = monthly * 12;
+      const weekly = monthly / 4.33;
+      const daily = monthly / 30;
+      const hourly = daily / 8;
+
+      ids.monthly.textContent = money(monthly);
+      ids.yearly.textContent = money(yearly);
+      ids.weekly.textContent = money(weekly);
+      ids.daily.textContent = money(daily);
+      ids.hourly.textContent = money(hourly);
+    }
+
+    function clearForm() {
+      document.querySelectorAll('textarea, input').forEach(el => el.value = '');
+      calculate();
+    }
+
+    inputs.forEach(input => input.addEventListener('input', calculate));
+    calculate();
+    window.clearForm = clearForm;
+  </script>
+</body>
+</html>
