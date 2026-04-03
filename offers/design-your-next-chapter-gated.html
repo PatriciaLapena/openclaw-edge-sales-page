@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Your Next Chapter Workbook</title>
+  <style>
+    :root {
+      --blush: #f6e7eb;
+      --rose: #c98ea3;
+      --mauve: #845f70;
+      --lavender: #eee4f2;
+      --cream: #fffaf6;
+      --charcoal: #3e363a;
+      --gold: #d8b46a;
+      --line: #e6d6dc;
+      --shadow: 0 14px 34px rgba(111, 75, 93, 0.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--charcoal);
+      background:
+        radial-gradient(circle at top left, rgba(238,228,242,.8), transparent 24%),
+        linear-gradient(180deg, #fffdfb 0%, #fff7f2 100%);
+      line-height: 1.65;
+    }
+    .hero {
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      align-items: end;
+      background:
+        linear-gradient(180deg, rgba(60,40,49,0.10) 0%, rgba(60,40,49,0.44) 100%),
+        url('./assets/next-chapter-hero.jpg') center/cover no-repeat;
+    }
+    .hero-inner {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 24px;
+      color: white;
+    }
+    .pill {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.28);
+      padding: 7px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      font-size: .9rem;
+    }
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.08;
+      margin: 0;
+    }
+    .hero p {
+      max-width: 740px;
+      font-size: 1.08rem;
+      margin: 14px 0 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 24px 72px;
+    }
+    .welcome {
+      margin-top: -38px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid rgba(233, 216, 223, 0.95);
+      border-radius: 24px;
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+    }
+    .section {
+      margin-top: 24px;
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(233, 216, 223, 0.95);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin: 0 0 10px;
+      color: var(--mauve);
+      font-size: 1.65rem;
+    }
+    .intro {
+      color: #675960;
+      margin-top: 0;
+    }
+    .question-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .q-card, .money-card {
+      background: linear-gradient(180deg, #fffdfd 0%, #fff7fa 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .q-title {
+      color: #734f60;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+    }
+    .q-text {
+      color: #5f5359;
+      margin-bottom: 10px;
+      font-size: .98rem;
+    }
+    textarea,
+    input[type="number"] {
+      width: 100%;
+      font: inherit;
+      border: 1px solid #dbc7cf;
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: white;
+      color: var(--charcoal);
+    }
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+    textarea:focus,
+    input:focus {
+      outline: none;
+      border-color: var(--rose);
+      box-shadow: 0 0 0 4px rgba(201, 142, 163, 0.16);
+    }
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #614f57;
+      font-weight: bold;
+    }
+    .help {
+      color: #8b7981;
+      font-size: .86rem;
+      margin-top: 6px;
+    }
+    .results {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .result {
+      background: linear-gradient(180deg, #fffaf6 0%, #ffffff 100%);
+      border: 1px solid #eddcc8;
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+    }
+    .result .label {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #8d7159;
+    }
+    .result .value {
+      display: block;
+      margin-top: 8px;
+      color: var(--mauve);
+      font-size: 1.35rem;
+      font-weight: bold;
+    }
+    .cta {
+      background: linear-gradient(135deg, #f6e7eb 0%, #fff8f3 45%, #eee4f2 100%);
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font: inherit;
+      cursor: pointer;
+    }
+    .primary { background: var(--mauve); color: white; }
+    .secondary { background: white; color: var(--mauve); border: 1px solid #dbc7cf; }
+    .footer-note {
+      text-align: center;
+      color: #8b7981;
+      margin-top: 26px;
+    }
+    @media (max-width: 920px) {
+      .question-grid, .calculator-grid, .results { grid-template-columns: 1fr; }
+      .hero { min-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="pill">Reclaimed Vitality Workbook</div>
+      <h1>Design Your Next Chapter</h1>
+      <p>A gentle place to tell the truth about what you want now — and to see what it may take to support that life.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p id="welcomeText"><strong>Welcome.</strong> Take your time with this workbook. Answer honestly, gently, and without shrinking what you really want.</p>
+    </section>
+
+    <section class="section">
+      <h2>Your Next Chapter Vision</h2>
+      <p class="intro">The questions stay visible while you type, so this feels more like a guided conversation than a blank form.</p>
+      <div class="question-grid">
+        <div class="q-card">
+          <div class="q-title">1. Home & Environment</div>
+          <div class="q-text">What kind of home feels beautiful, peaceful, and supportive in this next chapter?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="q-card">
+          <div class="q-title">2. Health, Energy & Vitality</div>
+          <div class="q-text">How do you want to feel physically, emotionally, and day to day in your body?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="q-card">
+          <div class="q-title">3. Travel, Experiences & Adventure</div>
+          <div class="q-text">Where do you want to go, and what experiences still matter deeply to you?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="q-card">
+          <div class="q-title">4. Nourishment & Daily Living</div>
+          <div class="q-text">What would nourishment, ease, and daily rhythms look like in the life you want?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="q-card">
+          <div class="q-title">5. Freedom, Time & Space</div>
+          <div class="q-text">How do you want your days to feel, and what are you ready to release?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="q-card">
+          <div class="q-title">6. Beauty, Self-Care & Support</div>
+          <div class="q-text">What kind of self-care, support, beauty, or help would make life feel lighter and more enjoyable?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="q-card">
+          <div class="q-title">7. Relationships, Community & Contribution</div>
+          <div class="q-text">What kind of relationships and community do you want around you in this season?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="q-card">
+          <div class="q-title">8. Purpose, Passion & Possibility</div>
+          <div class="q-text">What still wants to come through you? What feels possible if you stop shrinking?</div>
+          <textarea placeholder="Write your answer here..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What Would Support This Life?</h2>
+      <div class="q-card">
+        <div class="q-title">Reflect gently</div>
+        <div class="q-text">What support, habits, resources, community, or income would help make this life sustainable?</div>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Your Gentle Lifestyle Numbers</h2>
+      <p class="intro">If you want, enter your monthly numbers below. Your totals will calculate automatically.</p>
+      <div class="calculator-grid">
+        <div class="money-card"><label for="homeCost">Home</label><input class="money-input" id="homeCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Mortgage, rent, condo fees, or dream-home cost</div></div>
+        <div class="money-card"><label for="transportCost">Transportation</label><input class="money-input" id="transportCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Vehicle payment, gas, transit, car service</div></div>
+        <div class="money-card"><label for="foodCost">Food & Dining</label><input class="money-input" id="foodCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Groceries, meals out, meal support</div></div>
+        <div class="money-card"><label for="travelCost">Travel</label><input class="money-input" id="travelCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Vacations, retreats, weekends away</div></div>
+        <div class="money-card"><label for="wellnessCost">Wellness & Self-Care</label><input class="money-input" id="wellnessCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Beauty, massage, supplements, wellness care</div></div>
+        <div class="money-card"><label for="supportCost">Support</label><input class="money-input" id="supportCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">House help, coaching, cleaner, assistant, chef</div></div>
+        <div class="money-card"><label for="familyCost">Giving / Family</label><input class="money-input" id="familyCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Helping family, generosity, gifts</div></div>
+        <div class="money-card"><label for="investCost">Savings / Investments</label><input class="money-input" id="investCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Retirement, investing, wealth-building</div></div>
+        <div class="money-card"><label for="lifestyleCost">Fun / Beauty / Lifestyle</label><input class="money-input" id="lifestyleCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Clothing, hobbies, entertainment, little luxuries</div></div>
+        <div class="money-card"><label for="otherCost">Other</label><input class="money-input" id="otherCost" type="number" min="0" step="0.01" placeholder="0.00"><div class="help">Anything else you want included</div></div>
+      </div>
+      <div class="results">
+        <div class="result"><span class="label">Per Month</span><span class="value" id="monthlyTotal">$0.00</span></div>
+        <div class="result"><span class="label">Per Year</span><span class="value" id="yearlyTotal">$0.00</span></div>
+        <div class="result"><span class="label">Per Week</span><span class="value" id="weeklyTotal">$0.00</span></div>
+        <div class="result"><span class="label">Per Day</span><span class="value" id="dailyTotal">$0.00</span></div>
+        <div class="result"><span class="label">Per Hour</span><span class="value" id="hourlyTotal">$0.00</span></div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <h2>What This Might Be Showing You</h2>
+      <p>You may be realizing that you want more energy, more peace, more beauty, more support, more freedom, or more possibility than you have been admitting.</p>
+      <p>If this exercise helped you see that you want more vitality, clarity, confidence, and community in this next chapter, <strong>Reclaimed Vitality</strong> is the place to begin.</p>
+      <p>And if this also showed you that the life you want will need stronger financial support, then <strong>Sister Wealth Creators</strong> becomes a natural next conversation.</p>
+      <div class="buttons">
+        <button class="primary" onclick="window.print()">Print / Save this page</button>
+        <button class="secondary" onclick="clearMoney()">Clear calculator</button>
+      </div>
+    </section>
+
+    <p class="footer-note">A beautiful next chapter does not begin when everything is perfect. It begins when you tell yourself the truth about what you want — and decide you are still allowed to have it.</p>
+  </main>
+
+  <script>
+    const lead = JSON.parse(localStorage.getItem('rv_next_chapter_lead') || 'null');
+    if (!lead || !lead.email) {
+      window.location.href = './design-your-next-chapter-optin.html';
+    } else {
+      document.getElementById('welcomeText').innerHTML = `<strong>Welcome, ${lead.name}.</strong> Take your time with this workbook. Answer honestly, gently, and without shrinking what you really want.`;
+    }
+
+    const inputs = Array.from(document.querySelectorAll('.money-input'));
+    const ids = {
+      monthly: document.getElementById('monthlyTotal'),
+      yearly: document.getElementById('yearlyTotal'),
+      weekly: document.getElementById('weeklyTotal'),
+      daily: document.getElementById('dailyTotal'),
+      hourly: document.getElementById('hourlyTotal')
+    };
+
+    function money(n) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
+    }
+
+    function calculate() {
+      const monthly = inputs.reduce((sum, input) => sum + (parseFloat(input.value) || 0), 0);
+      ids.monthly.textContent = money(monthly);
+      ids.yearly.textContent = money(monthly * 12);
+      ids.weekly.textContent = money(monthly / 4.33);
+      ids.daily.textContent = money(monthly / 30);
+      ids.hourly.textContent = money((monthly / 30) / 8);
+    }
+
+    function clearMoney() {
+      inputs.forEach(input => input.value = '');
+      calculate();
+    }
+
+    inputs.forEach(input => input.addEventListener('input', calculate));
+    calculate();
+    window.clearMoney = clearMoney;
+  </script>
+</body>
+</html>
