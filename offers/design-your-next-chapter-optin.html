@@ -176,21 +176,46 @@
   </section>
 
   <script>
-    document.getElementById('leadForm').addEventListener('submit', function (e) {
+    document.getElementById('leadForm').addEventListener('submit', async function (e) {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const error = document.getElementById('error');
+      const button = this.querySelector('button');
+      error.textContent = '';
+
       if (!name || !email || !email.includes('@')) {
         error.textContent = 'Please enter your name and a valid email address.';
         return;
       }
-      localStorage.setItem('rv_next_chapter_lead', JSON.stringify({
-        name,
-        email,
-        capturedAt: new Date().toISOString()
-      }));
-      window.location.href = './design-your-next-chapter-gated.html';
+
+      button.disabled = true;
+      button.textContent = 'Opening your workbook...';
+
+      try {
+        const response = await fetch('/api/next-chapter-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            email,
+            source: 'Design Your Next Chapter Opt-In'
+          })
+        });
+        const data = await response.json();
+        if (!response.ok || !data.ok) throw new Error(data.error || 'Unable to save your details right now.');
+
+        localStorage.setItem('rv_next_chapter_lead', JSON.stringify({
+          name,
+          email,
+          capturedAt: new Date().toISOString()
+        }));
+        window.location.href = data.redirect || './design-your-next-chapter-gated.html';
+      } catch (err) {
+        error.textContent = err.message || 'Something went wrong. Please try again.';
+        button.disabled = false;
+        button.textContent = 'Open My Workbook';
+      }
     });
   </script>
 </body>
