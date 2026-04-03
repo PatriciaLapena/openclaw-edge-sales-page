@@ -59,3 +59,4 @@ Reclaimed Vitality is not just a program — it's the beginning of a movement fo
 - **ScoreApp CTA Clickers:** 182763891811420020
 - **ScoreApp Leads:** 182138072772642593
 - **Sister Wealth Creators:** 180876439388685543
+- **Design Your Next Chapter Leads:** 183773508324558418

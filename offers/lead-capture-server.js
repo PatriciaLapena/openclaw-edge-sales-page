@@ -8,7 +8,7 @@ const PORT = Number(process.env.PORT || 8787);
 const WORKSPACE = '/root/.openclaw/workspace';
 const OFFERS_DIR = path.join(WORKSPACE, 'offers');
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY || fs.readFileSync(path.join(WORKSPACE, 'credentials', 'mailerlite_api_key.txt'), 'utf8').trim();
-const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID || '182138072772642593'; // ScoreApp Leads
+const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID || '183773508324558418'; // Design Your Next Chapter Leads
 const SUCCESS_REDIRECT = '/design-your-next-chapter-gated.html';
 
 function json(res, status, payload) {
