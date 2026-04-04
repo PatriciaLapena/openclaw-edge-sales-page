@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Design Your Next Chapter</title>
+  <style>
+    :root {
+      --blush: #f6e7eb;
+      --rose: #c98ea3;
+      --mauve: #845f70;
+      --lavender: #eee4f2;
+      --cream: #fffaf6;
+      --charcoal: #3e363a;
+      --gold: #d8b46a;
+      --line: #e6d6dc;
+      --shadow: 0 14px 34px rgba(111, 75, 93, 0.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--charcoal);
+      background:
+        linear-gradient(180deg, rgba(246,231,235,.75) 0%, rgba(255,250,246,1) 48%, rgba(238,228,242,.6) 100%);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 52px 24px 72px;
+    }
+    .card {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(233, 216, 223, 0.95);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero {
+      min-height: 280px;
+      display: flex;
+      align-items: end;
+      background:
+        linear-gradient(180deg, rgba(60,40,49,0.10) 0%, rgba(60,40,49,0.44) 100%),
+        url('./assets/next-chapter-hero.jpg') center/cover no-repeat;
+      color: white;
+      padding: 28px;
+    }
+    .pill {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.28);
+      padding: 7px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      font-size: .9rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.08;
+    }
+    .content {
+      padding: 30px 28px 34px;
+    }
+    h2 {
+      color: var(--mauve);
+      margin-top: 0;
+      font-size: 1.65rem;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      background: linear-gradient(180deg, #fffdfd 0%, #fff7fa 100%);
+    }
+    .step-number {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--blush);
+      color: var(--mauve);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-weight: bold;
+    }
+    .primary {
+      background: var(--mauve);
+      color: white;
+    }
+    .secondary {
+      background: white;
+      color: var(--mauve);
+      border: 1px solid #dbc7cf;
+    }
+    .note {
+      margin-top: 18px;
+      color: #7d6e75;
+      font-size: .96rem;
+    }
+    @media (max-width: 780px) {
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hero">
+        <div>
+          <div class="pill">Welcome to Reclaimed Vitality</div>
+          <h1 id="headline">Your workbook is ready</h1>
+        </div>
+      </div>
+      <div class="content">
+        <h2 id="greeting">I’m so glad you’re here.</h2>
+        <p>You’ve just taken a beautiful step toward getting honest about what you want this next chapter of life to feel like.</p>
+        <p><strong>Design Your Next Chapter</strong> is here to help you reflect on the life you want now — and gently see what it may take to support it.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <strong>Open the workbook</strong>
+            <p>Take your time and move through the questions gently and honestly.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <strong>Use the calculator</strong>
+            <p>If you want, enter your numbers and let the page calculate the totals for you.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <strong>Watch your inbox</strong>
+            <p>I’ll send a few gentle follow-up emails to help you keep going.</p>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <a class="button primary" href="./design-your-next-chapter-gated.html">Open the Workbook</a>
+          <a class="button secondary" href="./Design-Your-Next-Chapter-Workbook.pdf">Download the PDF Version</a>
+        </div>
+
+        <p class="note">You are not too old. You are not too late. And your next chapter does not have to be small.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const lead = JSON.parse(localStorage.getItem('rv_next_chapter_lead') || 'null');
+    if (lead && lead.name) {
+      document.getElementById('headline').textContent = `${lead.name}, your workbook is ready`;
+      document.getElementById('greeting').textContent = `I’m so glad you’re here, ${lead.name}.`;
+    }
+  </script>
+</body>
+</html>
