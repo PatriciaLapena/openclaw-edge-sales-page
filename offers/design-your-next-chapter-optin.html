@@ -149,17 +149,17 @@
       <div class="content">
         <div class="eyebrow">Free Reclaimed Vitality Workbook</div>
         <h1>Design Your Next Chapter</h1>
-        <p class="lead">A beautiful guided exercise for women 60+ to reconnect with the life they want now — and gently see what it may take to support it.</p>
+        <p class="lead">A gentle guided workbook for women 60+ who are ready to reconnect with what they truly want in this next chapter of life.</p>
         <ul>
-          <li>Reflect on the home, health, energy, and freedom you want in this next chapter</li>
-          <li>Get clear on what feels nourishing, beautiful, and meaningful now</li>
-          <li>Use the built-in lifestyle calculator to see your monthly, weekly, and daily numbers automatically</li>
+          <li>Reflect on the home, health, energy, freedom, and support you want now</li>
+          <li>Get honest about what feels beautiful, nourishing, and meaningful in this season</li>
+          <li>Use the built-in calculator to see what your desired lifestyle may take to support</li>
         </ul>
-        <p class="mini">Enter your name and email to open the workbook and calculator.</p>
+        <p class="mini">Enter your name and email below and I’ll send you straight into the workbook experience.</p>
       </div>
       <div class="form-wrap">
         <h2>Get Instant Access</h2>
-        <p class="sub">We’ll use your email to deliver your workbook access and future Reclaimed Vitality updates.</p>
+        <p class="sub">Enter your details to open the workbook now and receive gentle Reclaimed Vitality updates by email.</p>
         <form id="leadForm">
           <label for="name">First name</label>
           <input id="name" name="name" type="text" placeholder="Your first name" required />
@@ -167,7 +167,7 @@
           <label for="email">Email address</label>
           <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
-          <button class="button" type="submit">Open My Workbook</button>
+          <button class="button" type="submit">Open My Next Chapter Workbook</button>
           <div class="error" id="error"></div>
           <div class="note">This version is wired for real MailerLite capture when served through the lead-capture server.</div>
         </form>
@@ -190,7 +190,7 @@
       }
 
       button.disabled = true;
-      button.textContent = 'Opening your workbook...';
+      button.textContent = 'Opening your workbook…';
 
       try {
         const response = await fetch('/api/next-chapter-lead', {
@@ -214,7 +214,7 @@
       } catch (err) {
         error.textContent = err.message || 'Something went wrong. Please try again.';
         button.disabled = false;
-        button.textContent = 'Open My Workbook';
+        button.textContent = 'Open My Next Chapter Workbook';
       }
     });
   </script>
