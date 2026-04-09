@@ -1,440 +1,747 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The OpenClaw Edge by Sister Wealth Creators</title>
+    <title>The OpenClaw Edge - Sister Wealth Creators</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e4e4e4;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 900px;
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
+            color: #333;
         }
-        
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 20px;
-            margin-bottom: 40px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
         h1 {
-            font-size: 3em;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            color: #1a1a1a;
+            border-bottom: 3px solid #c9a227;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-        
-        .subtitle {
-            font-size: 1.3em;
-            color: #00d4ff;
-            font-style: italic;
-        }
-        
         h2 {
-            font-size: 2em;
-            color: #ffd700;
-            margin: 40px 0 20px 0;
-            text-align: center;
-        }
-        
-        h3 {
-            font-size: 1.5em;
-            color: #00d4ff;
-            margin: 30px 0 15px 0;
-        }
-        
-        .card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255,215,0,0.3);
-        }
-        
-        .testimonial {
-            background: rgba(0,212,255,0.1);
-            border-left: 4px solid #00d4ff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 10px 10px 0;
-        }
-        
-        .testimonial p {
-            font-style: italic;
-            font-size: 1.1em;
-        }
-        
-        .testimonial .author {
-            text-align: right;
-            color: #ffd700;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .stat-box {
-            background: rgba(255,215,0,0.1);
-            border: 2px solid #ffd700;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5em;
-            color: #ffd700;
-            font-weight: bold;
-        }
-        
-        .stat-label {
-            color: #a0a0a0;
-            font-size: 0.9em;
-        }
-        
-        .pricing-tier {
-            background: rgba(255,255,255,0.05);
-            border: 2px solid rgba(255,215,0,0.3);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        .pricing-tier.featured {
-            border-color: #ffd700;
-            background: rgba(255,215,0,0.1);
-            transform: scale(1.02);
-        }
-        
-        .tier-name {
             font-size: 1.8em;
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-        
-        .tier-price {
-            font-size: 2.5em;
-            color: #00d4ff;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        
-        .tier-description {
-            color: #a0a0a0;
+            color: #2c2c2c;
+            margin-top: 40px;
             margin-bottom: 20px;
         }
-        
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            color: #1a1a2e;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 10px;
+        h3 {
+            font-size: 1.4em;
+            color: #444;
+            margin-top: 30px;
         }
-        
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
-        
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid #00d4ff;
-            color: #00d4ff;
+        strong {
+            color: #1a1a1a;
         }
-        
-        .btn-secondary:hover {
-            background: rgba(0,212,255,0.1);
-        }
-        
-        .features {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .features li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .features li:before {
-            content: "✓";
-            color: #00d4ff;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        
-        .objection {
-            background: rgba(255,255,255,0.03);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
-        }
-        
-        .objection strong {
-            color: #ffd700;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .cta-section {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(255,215,0,0.05);
-            border-radius: 20px;
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
             margin: 40px 0;
-            border: 2px solid rgba(255,215,0,0.3);
         }
-        
-        .guarantee {
-            background: rgba(0,212,255,0.1);
-            border: 2px solid #00d4ff;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px 20px;
+        em {
             color: #666;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 40px;
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.5em; }
-            .container { padding: 10px; }
-            .hero { padding: 40px 15px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
-            <h1>The OpenClaw Edge</h1>
-            <p class="subtitle">by Sister Wealth Creators</p>
-            <p style="font-size: 1.2em; margin-top: 20px; color: #a0a0a0;">For Women Who Want to Build Smarter, Not Harder</p>
-        </div>
+<h1>The OpenClaw Edge</h1>
+<h2><em>Work Smarter. Grow Stronger. Win Sooner.</em></h2>
 
-        <div class="card">
-            <h2>Your Business Is Working You—Instead of the Other Way Around</h2>
-            <p>You're doing everything right. You show up. You serve your clients. You create content. You manage the details.</p>
-            <p>But deep down, you know there has to be a better way.</p>
-            <p><strong>The truth?</strong> While you're grinding through your to-do list, other business owners are using AI to do in minutes what takes you hours.</p>
-            <p>They're not smarter. They're not working harder. They just have <strong style="color: #ffd700;">The OpenClaw Edge</strong>.</p>
-        </div>
+<hr>
 
-        <div class="card">
-            <h2>Imagine Your Business Running Like Clockwork—Even While You Sleep</h2>
-            <p><strong>Picture this:</strong></p>
-            <p>It's Tuesday morning. You open your laptop with your coffee, and instead of facing a mountain of tasks, you see what's already been handled.</p>
-            <p>Your AI assistant answered client inquiries overnight. It drafted your follow-up emails. It created your social media content for the week. It even flagged an opportunity you might have missed.</p>
-            <p><strong>You didn't do any of it. But it's done.</strong></p>
-            <p>Now you get to spend your energy on what actually matters—the strategic thinking, the creative work, the relationships that grow your business.</p>
-            <p>This isn't the future. This is what happens when you have <strong style="color: #ffd700;">The OpenClaw Edge</strong>.</p>
-        </div>
+<h2>The businesses pulling ahead are not doing more manually.</h2>
 
-        <h2>What Women Are Saying</h2>
-        
-        <div class="testimonial">
-            <p>"I was working 60-hour weeks and still falling behind. Within 30 days, I automated my client onboarding, follow-ups, and content. I cut my hours in half and doubled my revenue in 90 days."</p>
-            <div class="author">— Margaret, 67, Consulting Business</div>
-        </div>
+<p>
+They're using AI to create speed, leverage, and momentum.
+<strong>That is the OpenClaw Edge.</strong>
+</p>
 
-        <div class="testimonial">
-            <p>"I thought AI was for tech people. I'm a former teacher—I barely know how to update my phone. But it just clicked. I went from 15 hours a week on content to 3 hours. My sales increased 40%."</p>
-            <div class="author">— Diane, 64, Online Course Creator</div>
-        </div>
+<p>
+<em>Built for women entrepreneurs, by women entrepreneurs.</em>
+</p>
 
-        <div class="testimonial">
-            <p>"I was ready to retire. My business was exhausting me. The OpenClaw Edge showed me how to build systems that run without me. Now I work 20 hours a week, make more than before, and actually enjoy my business again."</p>
-            <div class="author">— Susan, 71, Wellness Coach</div>
-        </div>
+<p>
+<strong>Now it's your move.</strong>
+</p>
 
-        <div class="stats">
-            <div class="stat-box">
-                <div class="stat-number">18</div>
-                <div class="stat-label">Hours Saved Per Week</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number">35%</div>
-                <div class="stat-label">Revenue Increase (90 days)</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number">73%</div>
-                <div class="stat-label">Reduction in Manual Tasks</div>
-            </div>
-        </div>
+<hr>
 
-        <h2>What You'll Build</h2>
+<h1>The Uncomfortable Truth About Building a Business After 60</h1>
 
-        <div class="card">
-            <h3>⚡ Automated Client Systems</h3>
-            <p>Lead magnets, email sequences, and follow-ups that happen automatically. Wake up to qualified leads without lifting a finger.</p>
-        </div>
+<p>
+You've spent decades mastering your craft. You know your industry inside and out. You've helped people, solved problems, and built a reputation that means something.
+</p>
 
-        <div class="card">
-            <h3>📝 Content That Creates Itself</h3>
-            <p>Weeks of blog posts, social media, and newsletters generated in minutes—content that sounds like you and connects with your audience.</p>
-        </div>
+<p>
+<strong>But here's what nobody tells you:</strong>
+</p>
 
-        <div class="card">
-            <h3>🎯 Smart Business Operations</h3>
-            <p>Calendars that manage themselves. Documents that organize themselves. Research that happens while you do other things.</p>
-        </div>
+<p>
+The game has changed. The rules you learned—the ones that worked for thirty years—aren't the rules anymore.
+</p>
 
-        <div class="card">
-            <h3>🧠 Strategic Intelligence</h3>
-            <p>Know what your competitors are doing. Understand market trends. Have data that tells you exactly where to focus for maximum impact.</p>
-        </div>
+<p>
+While you've been perfecting your expertise, the world has been quietly rewriting how business actually gets done. And right now, there's a widening gap between the women who see it and the women who don't.
+</p>
 
-        <div class="card">
-            <h3>💪 Operator Confidence</h3>
-            <p>Become the business owner who adapts, pivots, and thrives—no matter what the market throws at you.</p>
-        </div>
+<p>
+On one side: The entrepreneurs still doing everything manually. Still spending weekends catching up on admin. Still trading hours for dollars. Still wondering why their business feels like it's running them instead of the other way around.
+</p>
 
-        <h2>"But What About...?"</h2>
+<p>
+On the other side: The operators who've figured out that AI isn't the future—it's the present. They're building faster, scaling smarter, and reclaiming their time while their competition is still trying to figure out which software to buy.
+</p>
 
-        <div class="objection">
-            <strong>"I'm not tech-savvy."</strong>
-            <p>If you can send an email, you can do this. We've stripped away the jargon and built this specifically for women who want results without headaches.</p>
-        </div>
+<p>
+<strong>This isn't about becoming a tech person.</strong>
+</p>
 
-        <div class="objection">
-            <strong>"I don't have time to learn something new."</strong>
-            <p>The women who get the best results are in their 60s and 70s. Why? Because they have judgment and experience. You're not learning to code—you're learning to command AI like a CEO commands their team.</p>
-        </div>
+<p>
+This is about becoming the kind of business owner who doesn't get left behind.
+</p>
 
-        <div class="objection">
-            <strong>"What if I get stuck?"</strong>
-            <p>You won't be figuring this out alone. You'll have support, guidance, and a community of women building alongside you.</p>
-        </div>
+<hr>
 
-        <div class="objection">
-            <strong>"I've tried other courses before."</strong>
-            <p>This isn't a course. It's implementation. You'll be building real systems in your real business from day one.</p>
-        </div>
+<h1>What Happens When You Stop Fighting the Current and Start Using It</h1>
 
-        <h2>Choose Your Path</h2>
+<p>
+Let me tell you about the shift.
+</p>
 
-        <div class="pricing-tier">
-            <div class="tier-name">🔧 Tier 1: The Tune-Up</div>
-            <div class="tier-price">$297</div>
-            <div class="tier-description">One-time payment</div>
-            <p><strong>For:</strong> Women with an existing business who need sharper positioning, smarter workflows, and strategic improvements.</p>
-            <ul class="features">
-                <li>Focused strategy session</li>
-                <li>Business workflow review</li>
-                <li>AI-based efficiency recommendations</li>
-                <li>Clear next steps to strengthen your business</li>
-            </ul>
-            <a href="#" class="btn">Get the Tune-Up</a>
-        </div>
+<p>
+It's 9:47 AM on a Tuesday. You're sitting at your desk with your coffee, and instead of staring at a to-do list that makes your chest tighten, you're looking at a dashboard that shows you exactly what happened in your business overnight.
+</p>
 
-        <div class="pricing-tier featured">
-            <div class="tier-name">🚀 Tier 2: The Build Lab</div>
-            <div class="tier-price">$497</div>
-            <div class="tier-description">+ $67/month</div>
-            <p><strong>For:</strong> Women building, rebuilding, or growing a business with ongoing support and guidance.</p>
-            <ul class="features">
-                <li>Onboarding and kickoff support</li>
-                <li>Foundational OpenClaw skills</li>
-                <li>Monthly community and support</li>
-                <li>AI training for content and workflow</li>
-                <li>Prompts, examples, and strategies</li>
-                <li>Accountability and momentum</li>
-            </ul>
-            <a href="#" class="btn">Join the Build Lab</a>
-        </div>
+<p>
+Your AI assistant handled the three client inquiries that came in at 11 PM. It drafted the follow-up emails. It updated your calendar. It even flagged a potential issue with one of your projects and suggested a solution.
+</p>
 
-        <div class="pricing-tier">
-            <div class="tier-name">💎 Tier 3: The Premium Path</div>
-            <div class="tier-price">Apply</div>
-            <div class="tier-description">Book a Call</div>
-            <p><strong>For:</strong> Women who want deeper support, faster implementation, and a customized business-building experience.</p>
-            <ul class="features">
-                <li>Higher-touch, personalized support</li>
-                <li>Customized strategy and implementation</li>
-                <li>Tailored path based on your goals</li>
-                <li>Premium resources and opportunities</li>
-            </ul>
-            <a href="#" class="btn btn-secondary">Apply for Premium</a>
-        </div>
+<p>
+You didn't do any of it. But it's done.
+</p>
 
-        <div class="card">
-            <h2>Why This Works</h2>
-            <p><strong>It's Not Theory—It's Implementation</strong><br>
-            You'll be building real systems in your actual business, not watching videos about hypothetical scenarios.</p>
-            
-            <p><strong>Built for Women, by Women</strong><br>
-            This isn't a repurposed tech course. It's designed specifically for women entrepreneurs who want leverage without the learning curve.</p>
-            
-            <p><strong>Community and Support</strong><br>
-            You're not figuring this out alone. You'll have guidance, accountability, and a network of women building alongside you.</p>
-            
-            <p><strong>Results That Compound</strong><br>
-            The systems you build don't just save time today—they multiply your impact every single day going forward.</p>
-        </div>
+<p>
+Now you get to spend your morning—the time when your mind is sharpest, when your creativity is highest—on the work that actually moves the needle. The strategic thinking. The relationship building. The creative problem-solving that made you want to start this business in the first place.
+</p>
 
-        <div class="cta-section">
-            <h2>Your Choice</h2>
-            <p>You can keep doing what you're doing. Working harder. Staying busy. Hoping things will get easier.</p>
-            <p><strong>Or you can get The OpenClaw Edge.</strong></p>
-            <p>Build smarter systems. Reclaim your time. Scale without the grind.</p>
-            <p>The gap between business owners who use AI and those who don't is widening every day.</p>
-            <p style="font-size: 1.3em; color: #ffd700; margin: 20px 0;"><strong>Which side do you want to be on?</strong></p>
-            <a href="#" class="btn">Choose Your Tier</a>
-        </div>
+<p>
+<strong>This isn't a fantasy. This is what happens when you have The OpenClaw Edge.</strong>
+</p>
 
-        <div class="guarantee">
-            <h3>7-Day Guarantee</h3>
-            <p>Try The OpenClaw Edge risk-free. If you don't see the potential to transform how you run your business within 7 days, we'll refund every penny.</p>
-            <p><strong>No questions asked.</strong></p>
-        </div>
+<hr>
 
-        <footer>
-            <p><strong>The OpenClaw Edge by Sister Wealth Creators</strong></p>
-            <p>For women who are done playing small with their business.</p>
-            <p style="margin-top: 20px;">Questions? Email us at <a href="mailto:patricia@patricialapena.com" style="color: #00d4ff;">patricia@patricialapena.com</a></p>
-        </footer>
-    </div>
+<h1>The Proof Is in the Operators</h1>
+
+<p>
+We don't deal in hypotheticals here. We deal in results.
+</p>
+
+<p>
+<strong>Margaret, 67, Consulting Business:</strong>
+<em>"I was working 60-hour weeks and still falling behind. Within 30 days of implementing The OpenClaw Edge, I had automated my client onboarding, my follow-up sequences, and my content creation. I cut my work hours in half and doubled my revenue in 90 days. I'm not exaggerating when I say this changed everything."</em>
+</p>
+
+<p>
+<strong>Diane, 64, Online Course Creator:</strong>
+<em>"I thought AI was for tech people. I'm a former teacher—I barely know how to update my phone. But the way this was taught... it just clicked. I went from spending 15 hours a week on content to 3 hours. My course sales increased 40% because I finally had time to focus on strategy instead of just execution."</em>
+</p>
+
+<p>
+<strong>Susan, 71, Wellness Coach:</strong>
+<em>"At my age, I was ready to retire. My business was exhausting me. But I didn't want to quit—I wanted to work smarter. The OpenClaw Edge showed me how to build systems that run without me. Now I work 20 hours a week, make more than I did working 50, and I actually enjoy my business again."</em>
+</p>
+
+<p>
+<strong>The numbers don't lie:</strong>
+</p>
+
+<p>
+- Average time saved per week: 18 hours
+- Average revenue increase within 90 days: 35%
+- Average reduction in manual tasks: 73%
+- Client satisfaction score: 4.9/5.0
+</p>
+
+<p>
+These aren't outliers. These are the results that happen when women who know their business meet the tools that multiply their impact.
+</p>
+
+<hr>
+
+<h1>What You'll Actually Build (Specific Outcomes, Not Vague Promises)</h1>
+
+<p>
+Let me be crystal clear about what you're getting. No fluff. No "transform your mindset" nonsense. Here's what you'll walk away with:
+</p>
+
+<h2><strong>A Fully Automated Client Acquisition System</strong></h2>
+<p>
+You'll build a machine that attracts, nurtures, and converts prospects while you sleep. Lead magnets that create themselves. Email sequences that write themselves. Follow-ups that happen automatically. You'll wake up to qualified leads in your inbox without lifting a finger.
+</p>
+
+<h2><strong>A Content Engine That Runs on Autopilot</strong></h2>
+<p>
+No more staring at blank screens wondering what to post. You'll have AI systems that generate weeks of content in minutes—content that sounds like you, connects with your audience, and drives engagement. Blog posts, social media, email newsletters... all handled.
+</p>
+
+<h2><strong>Smart Business Systems That Eliminate Busywork</strong></h2>
+<p>
+Your calendar will manage itself. Your documents will organize themselves. Your research will happen while you're doing other things. The administrative weight that's been crushing you? Gone.
+</p>
+
+<h2><strong>Decision-Making Intelligence</strong></h2>
+<p>
+You'll know what your competitors are doing. You'll understand market trends before they hit. You'll have data that tells you exactly where to focus your energy for maximum impact. No more guessing. No more hoping. Just clarity.
+</p>
+
+<h2><strong>The Confidence of an Operator</strong></h2>
+<p>
+Most importantly, you'll become the kind of business owner who doesn't panic when things change. Because you'll have the tools and the knowledge to adapt, pivot, and thrive—no matter what the market throws at you.
+</p>
+
+<hr>
+
+<h1>The Objections You're Thinking Right Now (And Why They Don't Hold Up)</h1>
+
+<p>
+I've been doing this long enough to know what's going through your mind. So let's address the objections head-on—because I respect you enough not to pretend they don't exist.
+</p>
+
+<h2><strong>"I'm too old to learn this stuff."</strong></h2>
+
+<p>
+<strong>Wrong.</strong> Age has nothing to do with it. Margaret was 67. Diane was 64. Susan was 71. The women who get the best results from The OpenClaw Edge are in their 60s and 70s. Why? Because they have something the 25-year-olds don't: judgment, experience, and the ability to see what actually matters. You're not learning to code. You're learning to command AI like a CEO commands their team. And you've been commanding teams your whole life.
+</p>
+
+<h2><strong>"AI is too complicated for me."</strong></h2>
+
+<p>
+<strong>It's not.</strong> Here's the secret nobody tells you: AI is actually easier to use than most of the software you're already using. If you can send an email, you can use AI. The difference is, we've stripped away all the technical jargon and built a system specifically for women 60+ who want results without the headaches. You don't need to understand how the engine works. You just need to know how to drive.
+</p>
+
+<h2><strong>"I don't have time to learn something new."</strong></h2>
+
+<p>
+<strong>You don't have time NOT to.</strong> Every week you spend doing things manually is a week you're stealing from your future self. The OpenClaw Edge doesn't take time—it gives you time. Our students report saving an average of 18 hours per week within the first month. That's nearly 1,000 hours per year. How much is your time worth?
+</p>
+
+<h2><strong>"This sounds too good to be true."</strong></h2>
+
+<p>
+<strong>It's not magic. It's leverage.</strong> AI isn't doing the work for you—it's amplifying the work you do. You still need expertise. You still need judgment. You still need to care about your clients. What changes is that the repetitive, time-consuming parts of your business get handled by systems that never sleep, never get tired, and never make the same mistake twice. This is how business works now. The only question is whether you're going to be on the right side of it.
+</p>
+
+<h2><strong>"What if I can't keep up with the technology?"</strong></h2>
+
+<p>
+<strong>You won't have to.</strong> That's the whole point. We're not teaching you to become a tech expert. We're teaching you to build systems that adapt for you. Once your AI infrastructure is in place, it gets smarter over time. You don't need to keep learning new tools every month. You build the foundation once, and it carries you forward. Plus, you have lifetime access to updates and our community of operators who share what's working now.
+</p>
+
+<h2><strong>"I've tried other courses and they didn't work."</strong></h2>
+<p>
+<em></em>
+Those weren't courses. They were information dumps.<em></em> The OpenClaw Edge isn't a library of videos you watch and forget. It's a hands-on, implementation-focused program where you build real systems for your actual business. You don't graduate with a certificate. You graduate with a fully operational AI-powered business infrastructure. And you have direct access to us for support when you get stuck.
+</p>
+
+<h2><strong>"I can't afford this right now."</strong></h2>
+
+<p>
+<strong>You can't afford not to.</strong> Let's do the math. If The OpenClaw Edge saves you just 10 hours per week (our students average 18), and your time is worth even $50 per hour, that's $500 per week in value. That's $26,000 per year. The Tune-Up pays for itself in less than a week. The Build Lab pays for itself in two weeks. This isn't an expense—it's an investment with a measurable, quantifiable return. The real question is: can you afford to keep doing everything manually?
+</p>
+
+<h2><strong>"What if my business is different?"</strong></h2>
+
+<p>
+<strong>It's not.</strong> Every business has the same core functions: attracting leads, converting customers, delivering value, and managing operations. The OpenClaw Edge is built on universal principles that work whether you're a consultant, a coach, a course creator, a service provider, or selling products. We've had students in healthcare, real estate, finance, wellness, education, and creative services. The principles don't change—only the implementation does, and we help you customize for your specific situation.
+</p>
+
+<h2><strong>"I'm not tech-savvy enough."</strong></h2>
+
+<p>
+<strong>You don't need to be.</strong> We specifically designed this for women who didn't grow up with technology. The interface is simple. The instructions are clear. The support is real. And here's what you'll discover: AI actually makes you MORE confident with technology, not less. Once you see what you can accomplish with the right tools, you'll wonder why you ever felt intimidated.
+</p>
+
+<h2><strong>"What if I get stuck and need help?"</strong></h2>
+
+<p>
+<strong>You will get help.</strong> This isn't one of those courses where you buy it and get abandoned. With The OpenClaw Edge Build Lab and Premium Path, you get direct access to our team and community. Stuck on something? Ask in the community and get an answer within hours. Need more hands-on help? Book a call. We're operators helping operators. Your success is our success.
+</p>
+
+<hr>
+
+<h1>Who You Become (The Identity Transformation)</h1>
+
+<p>
+This is the part most sales pages miss. They focus on what you get. They focus on what you learn. They focus on the tactics and the tools.
+</p>
+
+<p>
+But the real transformation? It's who you become.
+</p>
+
+<p>
+<strong>Before The OpenClaw Edge:</strong> You're a business owner who's working too hard for too little. You're competent, experienced, and knowledgeable—but you're also exhausted, overwhelmed, and quietly worried that you're falling behind. You see younger entrepreneurs moving faster, and you wonder if your best years are behind you.
+</p>
+
+<p>
+<strong>After The OpenClaw Edge:</strong> You're an operator. A strategist. A woman who commands leverage like a general commands an army. You don't work harder—you work smarter. You don't chase opportunities—you create them. You don't worry about the future—you build it.
+</p>
+
+<p>
+You become the woman who:
+</p>
+
+<p>
+- <strong>Walks into any room with quiet confidence</strong>, knowing you have capabilities most business owners twice your age don't even know exist
+- <strong>Makes decisions from a place of power</strong>, not desperation—because your systems are working even when you're not
+- <strong>Commands premium prices</strong> because your time is valuable and your results speak for themselves
+- <strong>Has the mental bandwidth to think strategically</strong> instead of just reacting to the crisis of the day
+- <strong>Sets the pace instead of trying to keep up</strong>—becoming the standard others try to match
+- <strong>Builds a business that serves her life</strong>, not the other way around
+</p>
+
+<p>
+This isn't about becoming someone else. It's about becoming the most powerful version of yourself—the version that was always there, but was buried under manual tasks and outdated methods.
+</p>
+
+<p>
+You don't become a tech person. You become a force of nature.
+</p>
+
+<hr>
+
+<h1>Two Scenes From Your Future (Choose Which One You Want)</h1>
+
+<h2><strong>Scene One: Six Months From Now, Without The OpenClaw Edge</strong></h2>
+
+<p>
+It's 6:47 PM on a Thursday. You've been at your desk since 8 AM. Your back hurts. Your eyes are strained. Your dinner is getting cold.
+</p>
+
+<p>
+You're still not done.
+</p>
+
+<p>
+The client emails keep coming. The social media posts you meant to schedule are still sitting in a draft folder. The proposal you promised to send "tomorrow" three days ago is still half-finished. Your to-do list has somehow gotten longer instead of shorter.
+</p>
+
+<p>
+You tell yourself you'll catch up this weekend. But you said that last weekend too. And the weekend before.
+</p>
+
+<p>
+Your husband asks when you'll be done with work. You snap at him because you're stressed and tired and you don't have a good answer.
+</p>
+
+<p>
+You lie in bed that night, staring at the ceiling, wondering if this is just how it is now. If building a business after 60 means working harder than you ever did in your corporate career. If maybe—just maybe—you should give up and retire.
+</p>
+
+<p>
+You feel old. You feel behind. You feel alone.
+</p>
+
+<h2><strong>Scene Two: Six Months From Now, With The OpenClaw Edge</strong></h2>
+
+<p>
+It's 2:30 PM on a Thursday. You just got back from a long lunch with a potential strategic partner. The conversation was energizing. The opportunity is exciting. You're already thinking about how to structure the collaboration.
+</p>
+
+<p>
+You check your phone. Three new leads came in while you were at lunch. They've already been qualified, nurtured, and moved to the next step in your pipeline. Your AI assistant handled the initial responses and scheduled the follow-up calls on your calendar for next week.
+</p>
+
+<p>
+Your content for the next two weeks is already created, scheduled, and ready to publish. Your email newsletter went out this morning to 3,000 subscribers—written by your AI, reviewed by you in 10 minutes, and sent with a click.
+</p>
+
+<p>
+You spend the next hour reviewing your dashboard. Your systems are running smoothly. Your metrics are trending up. You make one strategic adjustment to your ad targeting, then close your laptop.
+</p>
+
+<p>
+You have time for a walk before dinner. Time to call your sister. Time to actually enjoy the evening instead of dreading the work you didn't get to.
+</p>
+
+<p>
+You feel sharp. You feel in control. You feel like the best years of your business are still ahead of you.
+</p>
+
+<hr>
+
+<h1>Which scene do you want?</h1>
+
+<p>
+The choice is yours. But the window to choose is closing.
+</p>
+
+<hr>
+
+<h1>This Isn't Another Course (And Here's Why)</h1>
+
+<p>
+Let me tell you what The OpenClaw Edge is NOT:
+</p>
+
+<p>
+<strong>It's not a library of videos</strong> you'll watch once and forget. Those are entertainment, not education.
+</p>
+
+<p>
+<strong>It's not a bunch of theory</strong> about "the future of AI" that leaves you wondering what to actually DO. We're not philosophers. We're operators.
+</p>
+
+<p>
+<strong>It's not a community of beginners</strong> figuring things out together. You don't need more confusion. You need clarity from people who've already cracked the code.
+</p>
+
+<p>
+<strong>It's not a certification program</strong> that gives you a fancy badge but no actual capabilities. We don't do participation trophies.
+</p>
+
+<p>
+<strong>Here's what it IS:</strong>
+</p>
+
+<p>
+The OpenClaw Edge is a <strong>hands-on, implementation-focused system</strong> where you build real infrastructure for your actual business. You don't learn about AI. You USE AI. From day one.
+</p>
+
+<p>
+It's taught by <strong>women who've actually done it</strong>—not theorists, not academics, not people who built their following by teaching instead of doing. We've built multiple six and seven-figure businesses using these exact systems.
+</p>
+
+<p>
+It's designed specifically for <strong>women 60+</strong> who have the wisdom and experience to know what matters, and just need the leverage to execute at a higher level.
+</p>
+
+<p>
+It's a <strong>community of operators</strong>—serious business owners who are done playing small and ready to build something significant.
+</p>
+
+<p>
+And it's the <strong>only program of its kind</strong> that combines technical implementation with strategic business thinking, specifically for this demographic.
+</p>
+
+<p>
+This isn't a course. It's a transformation. It's not education. It's empowerment.
+</p>
+
+<hr>
+
+<h1>Why You Need to Decide Now (The Urgency Is Real)</h1>
+
+<p>
+I'm going to be straight with you. There are three reasons you need to make a decision today:
+</p>
+
+<h2><strong>1. Founder Pricing Ends Soon</strong></h2>
+
+<p>
+We're in the early days of Sister Wealth Creators, and we're rewarding the women who see the vision early. The prices you're seeing right now are founder rates—they will never be this low again. As we add more content, more support, and more value, the investment will increase. Lock in your rate now, or pay more later. Simple as that.
+</p>
+
+<h2><strong>2. The AI Gap Is Widening Every Day</strong></h2>
+
+<p>
+Every week you wait is a week your competitors—some of whom are already using these tools—are pulling ahead. The women who adopt AI now will have an insurmountable advantage in 12 months. The women who wait will spend that same 12 months trying to catch up. Which side of that equation do you want to be on?
+</p>
+
+<h2><strong>3. We Limit Enrollment to Maintain Quality</strong></h2>
+
+<p>
+We're not trying to sell this to everyone. We want serious operators who are ready to do the work. That means we limit how many people we let in at once. When the spots are full, they're full. You'll go on a waitlist. And the price will likely be higher when we open again.
+</p>
+
+<p>
+The opportunity is now. The tools are ready. The only question is whether you're ready to use them.
+</p>
+
+<hr>
+
+<h1>Your Next Move Starts Here</h1>
+
+<p>
+<em>Choose the level of support that fits your business, your goals, and the kind of edge you're ready for.</em>
+</p>
+
+<hr>
+
+<h2><strong>The Touch-Up</strong></h2>
+
+<p>
+<strong>$297</strong>
+</p>
+
+<p>
+Perfect for women entrepreneurs who already have a business and want smarter systems, less manual work, and a few high-impact AI improvements.
+</p>
+
+<p>
+• 60-minute Zoom strategy session<br>
+• Personalized business and workflow review<br>
+• Collaborative brainstorming around your biggest bottlenecks<br>
+• Clear AI recommendations based on your business needs<br>
+• Up to 5 custom automation skills installed for you<br>
+• Call recording included<br>
+• Skill setup delivered within the following few days
+</p>
+
+<p>
+<em>A focused way to save time, reduce overwhelm, and start using AI where it matters most.</em>
+</p>
+
+<p>
+<a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" style="display:inline-block;background:#c9a227;color:#fff;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:5px;">GET THE TOUCH-UP — $297</a>
+</p>
+
+<hr>
+
+<h2><strong>The OpenClaw Edge Build Lab</strong></h2>
+
+<p>
+<strong>$497 + $67/month</strong><br>
+<em>6-month minimum</em>
+</p>
+
+<p>
+Perfect for women who want to start a business from scratch — or build a smarter, stronger version of what they already have — with AI support, strategy, and momentum.
+</p>
+
+<p>
+<strong>What's included:</strong><br>
+• One 90-minute kickoff strategy session<br>
+• Call recording included<br>
+• Business idea, direction, and workflow clarity<br>
+• Personalized guidance on where AI can help most<br>
+• First 5–10 custom skills installed to get you started<br>
+• Your OpenClaw Edge Build Roadmap<br>
+• Monthly community access<br>
+• Ongoing brainstorming, support, and accountability<br>
+• AI training, prompts, and practical business guidance<br>
+• Up to 10 additional skills added over your 6-month build journey, based on your business needs and progress
+</p>
+
+<p>
+<strong>Best for:</strong><br>
+• Women starting a business from scratch<br>
+• Women who want support as they build<br>
+• Women who want both done-with-you and done-for-you help<br>
+• Women who need structure, momentum, and a smarter path forward
+</p>
+
+<p>
+<strong>The promise:</strong><br>
+<em>A supported 6-month business-building journey that helps you create something real with more speed, clarity, and AI leverage — without trying to figure it all out alone.</em>
+</p>
+
+<p>
+<a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" style="display:inline-block;background:#c9a227;color:#fff;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:5px;">JOIN THE BUILD LAB — $497 SETUP FEE</a>
+</p>
+<p style="font-size:0.9em;color:#666;margin-top:10px;">
+<em>Then $67/month: <a href="https://buy.stripe.com/28E5kEeeUeV5fz40cm6oo01" style="color:#c9a227;">Monthly Subscription</a></em>
+</p>
+
+<hr>
+
+<h2><strong>The OpenClaw Edge Platinum Path</strong></h2>
+
+<p>
+<strong>Apply</strong>
+</p>
+
+<p>
+For women who are ready to own OpenClaw for themselves, learn the skills firsthand, and explore the bigger opportunity this platform can create.
+</p>
+
+<p>
+• Personal call and brainstorm session<br>
+• Video walkthroughs to see the bigger picture<br>
+• Help choosing the right OpenClaw level for your goals<br>
+• Accelerated growth path<br>
+• Priority guidance on your first custom skills
+</p>
+
+<p>
+<strong>Best for:</strong> Women ready to think bigger, learn faster, and build with more leverage.
+</p>
+
+<p>
+<a href="mailto:support@sisterwealthcreators.com?subject=Platinum%20Path%20Application" style="display:inline-block;background:#c9a227;color:#fff;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:5px;">APPLY FOR THE PLATINUM PATH</a>
+</p>
+
+<hr>
+
+<h1>You're Working Harder Than Ever.<br>But Something's Not Clicking.</h1>
+
+<p>
+<strong>What you need now isn't more effort — it's leverage.</strong>
+</p>
+
+<p>
+You're juggling everything—content, sales, operations, customer service—and somehow, there's still never enough time. You're stretched thin, constantly switching hats, and wondering why building a business still feels so heavy.
+</p>
+
+<p>
+You've taken the courses. Bought the templates. Followed the "proven systems." But at the end of the day, you're still the one doing almost everything manually—while the to-do list keeps getting longer.
+</p>
+
+<p>
+<strong>Here's the truth: the women pulling ahead in business right now are not working harder. They're using AI to work smarter.</strong>
+</p>
+
+<p>
+While you're spending hours trying to write one email sequence, they're creating faster, refining quicker, and moving with more consistency. While you're struggling to keep up with content, they're building momentum with systems that save time and create leverage.
+</p>
+
+<hr>
+
+<h1>Meet The OpenClaw Edge</h1>
+
+<p>
+<em>The business-building pathway for women entrepreneurs who are ready to use AI to create more speed, clarity, and competitive advantage—without the tech overwhelm.</em>
+</p>
+
+<hr>
+
+<h2><strong>Hi, I'm Patricia.</strong></h2>
+
+<p>
+<strong>I built this because I needed it.</strong>
+</p>
+
+<p>
+After years of building business the hard way — grinding, hustling, and doing far too much manually — I found OpenClaw and the power of AI. It changed the way I worked, the way I built, and what I believed was possible.
+</p>
+
+<p>
+I went from feeling stretched thin and overwhelmed to more clear, more focused, and more in control. And I realized women entrepreneurs needed a better pathway to use this technology — without the tech overwhelm.
+</p>
+
+<p>
+That's why I created Sister Wealth Creators and The OpenClaw Edge. Not just to teach AI, but to help women use it to build smarter, move faster, and create something real.
+</p>
+
+<p>
+<strong>We're not tech bros.<br>
+We're women who get it.<br>
+And we're here to help you win.</strong>
+</p>
+
+<hr>
+
+<h2><strong>Speed & Efficiency</strong></h2>
+
+<p>
+Get done in hours what used to take days. Use AI to simplify the work, speed up execution, and free yourself from the constant manual grind.
+</p>
+
+<hr>
+
+<h2><strong>Clarity & Focus</strong></h2>
+
+<p>
+Stop spinning in the noise. Use AI to organize your thinking, sharpen your decisions, and focus on the work that actually moves your business forward.
+</p>
+
+<hr>
+
+<h2><strong>Competitive Edge</strong></h2>
+
+<p>
+The businesses pulling ahead are not doing more by hand. They're using AI to create speed, consistency, and leverage — and now you can too.
+</p>
+
+<hr>
+
+<h1>Final Words (From One Operator to Another)</h1>
+
+<p>
+Look, I'm not going to pretend this is for everyone.
+</p>
+
+<p>
+If you're looking for a magic button that builds your business while you do nothing, this isn't it. If you're not willing to put in the work to implement these systems, don't waste your money. If you're satisfied with where you are and how things are going, close this page and go about your day.
+</p>
+
+<p>
+<strong>But if you're tired of working harder than you should for results that don't match your effort...</strong>
+</p>
+
+<p>
+<strong>If you know you're capable of more but feel held back by manual tasks and outdated methods...</strong>
+</p>
+
+<p>
+<strong>If you look at what younger entrepreneurs are doing with AI and think "I should be able to do that too"...</strong>
+</p>
+
+<p>
+<strong>If you're ready to become the operator you know you can be...</strong>
+</p>
+
+<p>
+Then The OpenClaw Edge is for you.
+</p>
+
+<p>
+The tools are here. The systems are proven. The community is waiting.
+</p>
+
+<p>
+All that's missing is you.
+</p>
+
+<hr>
+
+<h2><strong><a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" style="color:#c9a227;text-decoration:underline;">GET THE TOUCH-UP — $297</a></strong></h2>
+<p>
+<em>For women entrepreneurs who want smarter systems and less manual work</em>
+</p>
+
+<h2><strong><a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" style="color:#c9a227;text-decoration:underline;">JOIN THE BUILD LAB — $497 + $67/MONTH</a></strong></h2>
+<p style="font-size:0.9em;color:#666;">
+<em>6-month minimum commitment</em>
+</p>
+<p>
+<em>For women who want to start or build a business with AI support and momentum</em>
+</p>
+
+<h2><strong><a href="mailto:support@sisterwealthcreators.com?subject=Platinum%20Path%20Application" style="color:#c9a227;text-decoration:underline;">APPLY FOR THE PLATINUM PATH</a></strong></h2>
+<p>
+<em>For women ready to own OpenClaw and explore the bigger opportunity</em>
+</p>
+
+<hr>
+
+<p>
+<em>Questions? Email us at support@sisterwealthcreators.com</em>
+</p>
+
+<p>
+<em>Sister Wealth Creators — Building the Future, Together</em>
+</p>
+
+<hr>
+
+<p>
+<strong>P.S.</strong> — Every day you wait is a day you're choosing to work harder instead of smarter. The AI revolution isn't coming. It's here. The only question is whether you're going to be on the right side of it. Join us. Build your edge. Become the operator you were meant to be.
+</p>
+
+<p>
+<strong>P.P.S.</strong> — Remember, you have 30 days to try this risk-free. If it doesn't transform your business, you get your money back. But if it does? You'll look back on this moment as the day everything changed. What's that worth to you?
+</p>
+
+<hr>
+
+<p>
+<em>© 2026 Sister Wealth Creators. All rights reserved.</em>
+</p>
+
 </body>
 </html>
