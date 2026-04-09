@@ -12,347 +12,338 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(180deg, #faf8f5 0%, #f5f0e8 100%);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #faf9f7;
             color: #3d3d3d;
             line-height: 1.8;
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
         }
         
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             text-align: center;
-            padding: 80px 40px;
-            background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
-            border-radius: 20px;
-            margin: 40px 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .hero-pretitle {
-            font-size: 1.1em;
+            font-size: 1em;
             color: #c9a227;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         h1 {
-            font-size: 3.5em;
+            font-size: 3.2em;
             color: #2c2c2c;
-            margin-bottom: 20px;
-            font-weight: 700;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
         
-        .hero-subtitle {
-            font-size: 1.8em;
+        .hero-headline {
+            font-size: 1.9em;
             color: #5a5a5a;
             margin-bottom: 20px;
             font-weight: 300;
+            line-height: 1.4;
         }
         
         .hero-description {
-            font-size: 1.2em;
-            color: #7a7a7a;
-            max-width: 700px;
-            margin: 0 auto 30px;
+            font-size: 1.15em;
+            color: #6a6a6a;
+            max-width: 650px;
+            margin: 0 auto 25px;
         }
         
         .hero-cta {
-            font-size: 1.3em;
+            font-size: 1.25em;
             color: #c9a227;
             font-weight: 600;
         }
         
-        /* SECTION HEADERS */
-        h2 {
-            font-size: 2.2em;
-            color: #2c2c2c;
-            margin: 60px 0 30px;
-            text-align: center;
-            font-weight: 600;
+        /* PRICING - 3 SMALL BOXES SIDE BY SIDE */
+        .pricing-section {
+            margin: 50px 0;
         }
         
-        h3 {
-            font-size: 1.5em;
-            color: #c9a227;
-            margin: 30px 0 15px;
-            font-weight: 600;
-        }
-        
-        /* CONTENT CARDS */
-        .card {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 40px;
-            margin: 30px 20px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
-        }
-        
-        .card-highlight {
-            border-left: 4px solid #c9a227;
-        }
-        
-        /* PRICING SECTION */
         .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
         }
         
-        .pricing-card {
+        .pricing-box {
             background: #ffffff;
-            border-radius: 20px;
-            padding: 40px 30px;
+            border-radius: 12px;
+            padding: 35px 25px;
+            width: 320px;
             text-align: center;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
             position: relative;
-            transition: transform 0.3s ease;
         }
         
-        .pricing-card:hover {
-            transform: translateY(-10px);
+        .pricing-box.featured {
+            border: 2px solid #c9a227;
+            transform: scale(1.03);
         }
         
-        .pricing-card.featured {
-            border: 3px solid #c9a227;
-            transform: scale(1.05);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-        
-        .popular-badge {
+        .popular-tag {
             position: absolute;
-            top: -15px;
+            top: -12px;
             left: 50%;
             transform: translateX(-50%);
             background: #c9a227;
             color: white;
-            padding: 8px 20px;
+            padding: 6px 18px;
             border-radius: 20px;
+            font-size: 0.8em;
             font-weight: 600;
-            font-size: 0.9em;
-        }
-        
-        .tier-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
         
         .tier-name {
-            font-size: 1.6em;
+            font-size: 1.4em;
             color: #2c2c2c;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 600;
         }
         
         .tier-price {
-            font-size: 2.8em;
+            font-size: 2.4em;
             color: #c9a227;
             font-weight: 700;
-            margin: 15px 0;
+            margin: 15px 0 5px;
         }
         
         .tier-price-note {
-            font-size: 1em;
-            color: #7a7a7a;
-            margin-bottom: 20px;
+            font-size: 0.95em;
+            color: #8a8a8a;
+            margin-bottom: 15px;
         }
         
         .tier-description {
             color: #5a5a5a;
-            margin-bottom: 25px;
-            font-size: 1em;
-            line-height: 1.6;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         
         .features {
             list-style: none;
             padding: 0;
             text-align: left;
-            margin: 25px 0;
+            margin: 20px 0;
         }
         
         .features li {
-            padding: 12px 0;
+            padding: 8px 0;
             border-bottom: 1px solid #f0f0f0;
             color: #5a5a5a;
+            font-size: 0.9em;
         }
         
         .features li:before {
             content: "✓";
             color: #c9a227;
             font-weight: bold;
-            margin-right: 10px;
+            margin-right: 8px;
         }
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #c9a227 0%, #d4b43a 100%);
+            background: #c9a227;
             color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
+            padding: 12px 35px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1em;
+            font-size: 1em;
+            margin-top: 15px;
             transition: all 0.3s ease;
-            margin-top: 20px;
-            box-shadow: 0 5px 15px rgba(201, 162, 39, 0.3);
         }
         
         .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.4);
+            background: #b89420;
+            transform: translateY(-2px);
         }
         
         .btn-secondary {
             background: transparent;
             border: 2px solid #c9a227;
             color: #c9a227;
-            box-shadow: none;
         }
         
         .btn-secondary:hover {
             background: rgba(201, 162, 39, 0.1);
         }
         
+        .tagline {
+            text-align: center;
+            color: #8a8a8a;
+            margin: 40px 0 30px;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+        
+        /* CONTENT SECTIONS */
+        .section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            color: #2c2c2c;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: #5a5a5a;
+            font-size: 1.05em;
+        }
+        
+        .highlight {
+            color: #c9a227;
+            font-weight: 600;
+        }
+        
         /* BENEFIT BOXES */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        .benefits-container {
+            display: flex;
+            justify-content: center;
             gap: 30px;
-            margin: 40px 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
         }
         
         .benefit-box {
             background: #ffffff;
-            border-radius: 15px;
-            padding: 40px 30px;
+            border-radius: 12px;
+            padding: 35px 30px;
+            width: 300px;
             text-align: center;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
         }
         
         .benefit-icon {
-            font-size: 3.5em;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            margin-bottom: 15px;
         }
         
         .benefit-title {
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #2c2c2c;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
         
         .benefit-description {
+            color: #6a6a6a;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        /* BIO SECTION */
+        .bio-section {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 50px;
+            margin: 60px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .bio-image {
+            width: 200px;
+            height: 250px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .bio-content {
+            flex: 1;
+        }
+        
+        .bio-pretitle {
+            color: #8a8a8a;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .bio-title {
+            font-size: 1.8em;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .bio-text {
             color: #5a5a5a;
+            margin-bottom: 15px;
             line-height: 1.7;
         }
         
-        /* IMAGE SECTION */
-        .image-section {
-            text-align: center;
-            margin: 50px 20px;
-        }
-        
-        .image-section img {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        .image-caption {
-            color: #7a7a7a;
-            margin-top: 15px;
-            font-size: 0.95em;
-        }
-        
-        /* TESTIMONIALS */
-        .testimonial {
-            background: linear-gradient(135deg, #fff9f5 0%, #f5f0e8 100%);
-            border-left: 4px solid #c9a227;
-            padding: 30px;
-            margin: 30px 20px;
-            border-radius: 0 15px 15px 0;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            font-size: 1.1em;
-            color: #5a5a5a;
-            margin-bottom: 15px;
-        }
-        
-        .testimonial-author {
-            text-align: right;
+        .bio-closing {
             color: #c9a227;
             font-weight: 600;
-        }
-        
-        /* STATS */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 40px 20px;
-        }
-        
-        .stat-box {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
-        }
-        
-        .stat-number {
-            font-size: 2.5em;
-            color: #c9a227;
-            font-weight: 700;
-        }
-        
-        .stat-label {
-            color: #7a7a7a;
-            margin-top: 10px;
+            font-size: 1.1em;
+            margin-top: 20px;
         }
         
         /* CTA SECTION */
         .cta-section {
-            background: linear-gradient(135deg, #fff9f5 0%, #f5f0e8 100%);
-            border-radius: 20px;
-            padding: 60px 40px;
-            margin: 50px 20px;
             text-align: center;
-            border: 2px solid rgba(201, 162, 39, 0.2);
+            padding: 60px 20px;
+            margin: 60px 0;
         }
         
         .cta-title {
-            font-size: 2em;
+            font-size: 1.8em;
             color: #2c2c2c;
             margin-bottom: 20px;
         }
         
         .cta-text {
-            color: #5a5a5a;
-            font-size: 1.1em;
-            max-width: 700px;
+            color: #6a6a6a;
+            max-width: 600px;
             margin: 0 auto 30px;
+            font-size: 1.05em;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 60px 20px;
-            color: #7a7a7a;
-            border-top: 1px solid #e0e0e0;
+            padding: 50px 20px;
+            color: #8a8a8a;
+            border-top: 1px solid #e8e8e8;
             margin-top: 60px;
         }
         
@@ -362,12 +353,32 @@
         }
         
         /* RESPONSIVE */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2em; }
-            h2 { font-size: 1.7em; }
-            .hero { padding: 50px 20px; }
-            .pricing-card.featured { transform: scale(1); }
-            .pricing-card.featured:hover { transform: translateY(-10px); }
+        @media (max-width: 900px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-box {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            .pricing-box.featured {
+                transform: scale(1);
+            }
+            
+            .bio-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .bio-image {
+                margin: 0 auto;
+            }
+            
+            h1 { font-size: 2.4em; }
+            .hero-headline { font-size: 1.5em; }
         }
     </style>
 </head>
@@ -377,94 +388,86 @@
         <div class="hero">
             <p class="hero-pretitle">✨ Sister Wealth Creators Presents ✨</p>
             <h1>The OpenClaw Edge</h1>
-            <p class="hero-subtitle">The Edge Isn't Extra Anymore.<br>It's Essential.</p>
+            <p class="hero-headline">The Edge Isn't Extra Anymore.<br>It's Essential.</p>
             <p class="hero-description">OpenClaw EDGE gives women entrepreneurs the AI advantage to build faster, think clearer, and scale smarter.</p>
             <p class="hero-cta">So you STOP working harder—and start WINNING bigger.</p>
         </div>
 
-        <!-- PRICING -->
-        <div class="pricing-container">
-            <!-- TOUCH-UP -->
-            <div class="pricing-card">
-                <div class="tier-icon">🔧</div>
-                <div class="tier-name">The Touch-Up</div>
-                <div class="tier-price">$297</div>
-                <p class="tier-description">Perfect if you need strategic improvements to your existing business</p>
-                <ul class="features">
-                    <li>Focused strategy session</li>
-                    <li>Business & workflow review</li>
-                    <li>AI-powered recommendations</li>
-                    <li>Clear positioning strategies</li>
-                    <li>Actionable next steps</li>
-                    <li>Up to 5 skills done for you</li>
-                </ul>
-                <a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" class="btn">Get Started</a>
-            </div>
+        <!-- PRICING - 3 SMALL BOXES SIDE BY SIDE -->
+        <div class="pricing-section">
+            <div class="pricing-container">
+                <!-- TOUCH-UP -->
+                <div class="pricing-box">
+                    <div class="tier-name">The Touch-Up</div>
+                    <div class="tier-price">$297</div>
+                    <p class="tier-description">Perfect if you need strategic improvements to your existing business</p>
+                    <ul class="features">
+                        <li>Focused strategy session</li>
+                        <li>Business & workflow review</li>
+                        <li>AI-powered recommendations</li>
+                        <li>Clear positioning strategies</li>
+                        <li>Actionable next steps</li>
+                        <li>Up to 5 skills done for you</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" class="btn">Get Started</a>
+                </div>
 
-            <!-- BUILD LAB -->
-            <div class="pricing-card featured">
-                <div class="popular-badge">Most Popular</div>
-                <div class="tier-icon">🚀</div>
-                <div class="tier-name">The Build Lab</div>
-                <div class="tier-price">$497</div>
-                <p class="tier-price-note">+ $67/month</p>
-                <p class="tier-description">Build or grow your business with ongoing support & AI guidance</p>
-                <ul class="features">
-                    <li>Everything in Touch-Up, plus:</li>
-                    <li>Monthly community access</li>
-                    <li>AI training & prompts</li>
-                    <li>Ongoing support</li>
-                    <li>Accountability & momentum</li>
-                    <li>Practical business strategies</li>
-                    <li>10-20 skills done for you</li>
-                </ul>
-                <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join The Lab</a>
-                <p style="margin-top: 15px; font-size: 0.9em; color: #7a7a7a;">Then <a href="https://buy.stripe.com/28E5kEeeUeV5fz40cm6oo01" style="color: #c9a227;">$67/month subscription</a></p>
-            </div>
+                <!-- BUILD LAB -->
+                <div class="pricing-box featured">
+                    <div class="popular-tag">MOST POPULAR</div>
+                    <div class="tier-name">The Build Lab</div>
+                    <div class="tier-price">$497</div>
+                    <p class="tier-price-note">+ $67/mo</p>
+                    <p class="tier-description">Build or grow your business with ongoing support & AI guidance</p>
+                    <ul class="features">
+                        <li>Everything in Touch-Up, plus:</li>
+                        <li>Monthly community access</li>
+                        <li>AI training & prompts</li>
+                        <li>Ongoing support</li>
+                        <li>Accountability & momentum</li>
+                        <li>Practical business strategies</li>
+                        <li>10-20 skills done for you</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join The Lab</a>
+                </div>
 
-            <!-- PREMIUM -->
-            <div class="pricing-card">
-                <div class="tier-icon">💎</div>
-                <div class="tier-name">Premium Path</div>
-                <div class="tier-price" style="font-size: 2em; padding: 20px 0;">Apply</div>
-                <p class="tier-description">Maximum customization and speed for serious growth</p>
-                <ul class="features">
-                    <li>Everything in Build Lab, plus:</li>
-                    <li>High-touch personalized support</li>
-                    <li>Customized strategy</li>
-                    <li>Done-with-you implementation</li>
-                    <li>Premium resources</li>
-                    <li>Accelerated growth path</li>
-                    <li>Unlimited skills done for you</li>
-                </ul>
-                <a href="mailto:support@sisterwealthcreators.com?subject=Premium%20Path%20Application" class="btn btn-secondary">Book a Call</a>
+                <!-- PREMIUM -->
+                <div class="pricing-box">
+                    <div class="tier-name">Premium Path</div>
+                    <div class="tier-price" style="font-size: 2em; padding: 10px 0;">Apply</div>
+                    <p class="tier-description">Maximum customization and speed for serious growth</p>
+                    <ul class="features">
+                        <li>Everything in Build Lab, plus:</li>
+                        <li>High-touch personalized support</li>
+                        <li>Customized strategy</li>
+                        <li>Done-with-you implementation</li>
+                        <li>Premium resources</li>
+                        <li>Accelerated growth path</li>
+                        <li>Unlimited skills done for you</li>
+                    </ul>
+                    <a href="mailto:support@sisterwealthcreators.com?subject=Premium%20Path%20Application" class="btn btn-secondary">Book a Call</a>
+                </div>
             </div>
         </div>
 
-        <p style="text-align: center; color: #7a7a7a; margin: 30px 0; font-size: 1.1em;">⚡ Instant Access • 3 Tiers for Every Stage • Built for Women Entrepreneurs</p>
+        <p class="tagline">⚡ Instant Access • 3 Tiers for Every Stage • Built for Women Entrepreneurs</p>
 
-        <!-- IMAGE -->
-        <div class="image-section">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=500&fit=crop" alt="Professional woman working on laptop">
-            <p class="image-caption">Woman working with technology</p>
-        </div>
-
-        <!-- WORKING HARDER SECTION -->
-        <div class="card card-highlight">
+        <!-- YOU'RE WORKING HARDER -->
+        <div class="section">
             <h2>You're Working Harder Than Ever.<br>But Something's Not Clicking.</h2>
-            <p style="font-size: 1.2em; color: #c9a227; margin-bottom: 20px;">It's time to stop grinding and start leveraging AI.</p>
+            <p><span class="highlight">It's time to stop grinding and start leveraging AI.</span></p>
             <p>You're juggling everything—content, sales, operations, customer service—and somehow, there's still never enough time. You're exhausted, stretched thin, and secretly wondering if building a business was supposed to be this draining.</p>
             <p>You've tried the courses. You've bought the templates. You've followed the "proven systems." But at the end of the day, you're still doing 90% of the work manually while your to-do list keeps growing.</p>
-            <p style="font-size: 1.2em; color: #c9a227; margin-top: 25px; font-weight: 600;">Here's the truth: The entrepreneurs winning right now aren't working harder. They're leveraging AI to work smarter.</p>
+            <p><span class="highlight">Here's the truth: The entrepreneurs winning right now aren't working harder. They're leveraging AI to work smarter.</span></p>
             <p>While you're spending 4 hours writing one email sequence, they're generating 10 in 20 minutes. While you're struggling to create content consistently, they've built a month's worth in an afternoon.</p>
         </div>
 
         <!-- MEET THE EDGE -->
-        <div class="card">
+        <div class="section">
             <h2>Meet The OpenClaw Edge</h2>
-            <p style="text-align: center; color: #5a5a5a; max-width: 700px; margin: 0 auto 40px; font-size: 1.1em;">The business-building pathway that helps women entrepreneurs leverage AI to create more speed, clarity, and competitive advantage—without the tech overwhelm.</p>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">The business-building pathway that helps women entrepreneurs leverage AI to create more speed, clarity, and competitive advantage—without the tech overwhelm.</p>
             
-            <div class="benefits-grid">
+            <div class="benefits-container">
                 <div class="benefit-box">
                     <div class="benefit-icon">⚡</div>
                     <div class="benefit-title">Speed & Efficiency</div>
@@ -487,24 +490,31 @@
         <div class="cta-section">
             <h2 class="cta-title">Your Edge Is Waiting</h2>
             <p class="cta-text">Choose the path that fits where you are right now. Each tier is designed to meet you exactly where you are and take you where you want to go.</p>
-            <a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" class="btn">Start With Touch-Up — $297</a>
-            <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join Build Lab — $497</a>
-            <a href="mailto:support@sisterwealthcreators.com?subject=Premium%20Path%20Application" class="btn btn-secondary">Apply for Premium</a>
+            <div class="cta-buttons">
+                <a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" class="btn">Start With Touch-Up — $297</a>
+                <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join Build Lab — $497</a>
+                <a href="mailto:support@sisterwealthcreators.com?subject=Premium%20Path%20Application" class="btn btn-secondary">Apply for Premium</a>
+            </div>
         </div>
 
         <!-- PATRICIA'S BIO -->
-        <div class="card">
-            <p style="color: #7a7a7a; font-size: 0.95em; margin-bottom: 10px;">Patricia Lapena - Founder of Sister Wealth Creators</p>
-            <h2>Hi, I'm Patricia.<br>I Built This Because I Needed It.</h2>
-            <p>After years of building businesses the hard way—grinding, hustling, doing everything manually—I discovered OpenClaw and AI. And it changed everything.</p>
-            <p>I went from working 60+ hour weeks to accomplishing more in 20 hours. I went from overwhelmed to in control. And I realized that women entrepreneurs like us needed a pathway to leverage this technology—without the tech overwhelm.</p>
-            <p>That's why I created Sister Wealth Creators and The OpenClaw Edge. Not just to teach you AI, but to walk alongside you as you build something extraordinary.</p>
-            <p style="font-size: 1.2em; color: #c9a227; margin-top: 25px; font-weight: 600;">We're not tech bros. We're women who get it. And we're here to help you win.</p>
+        <div class="bio-section">
+            <div class="bio-image">
+                [Your Photo Here]
+            </div>
+            <div class="bio-content">
+                <p class="bio-pretitle">Patricia Lapena - Founder of Sister Wealth Creators</p>
+                <h2 class="bio-title">Hi, I'm Patricia.<br>I Built This Because I Needed It.</h2>
+                <p class="bio-text">After years of building businesses the hard way—grinding, hustling, doing everything manually—I discovered OpenClaw and AI. And it changed everything.</p>
+                <p class="bio-text">I went from working 60+ hour weeks to accomplishing more in 20 hours. I went from overwhelmed to in control. And I realized that women entrepreneurs like us needed a pathway to leverage this technology—without the tech overwhelm.</p>
+                <p class="bio-text">That's why I created Sister Wealth Creators and The OpenClaw Edge. Not just to teach you AI, but to walk alongside you as you build something extraordinary.</p>
+                <p class="bio-closing">We're not tech bros. We're women who get it. And we're here to help you win.</p>
+            </div>
         </div>
 
         <!-- FOOTER -->
         <footer>
-            <p style="font-size: 1.2em; color: #2c2c2c; margin-bottom: 10px;"><strong>The OpenClaw Edge by Sister Wealth Creators</strong></p>
+            <p style="font-size: 1.1em; color: #2c2c2c; margin-bottom: 10px;"><strong>The OpenClaw Edge by Sister Wealth Creators</strong></p>
             <p>Building the Future, Together</p>
             <p style="margin-top: 20px;">Questions? Email us at <a href="mailto:support@sisterwealthcreators.com">support@sisterwealthcreators.com</a></p>
         </footer>
