@@ -13,8 +13,8 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e4e4e4;
+            background: linear-gradient(135deg, #fdf6f0 0%, #f5e6d3 100%);
+            color: #4a4a4a;
             line-height: 1.6;
         }
         
@@ -27,57 +27,56 @@
         .hero {
             text-align: center;
             padding: 60px 20px;
-            background: rgba(255,255,255,0.03);
+            background: linear-gradient(135deg, #fff9f5 0%, #ffe8d6 100%);
             border-radius: 20px;
             margin-bottom: 40px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 40px rgba(201, 162, 39, 0.1);
         }
         
         h1 {
             font-size: 3em;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #c9a227;
             margin-bottom: 10px;
         }
         
         .subtitle {
             font-size: 1.3em;
-            color: #00d4ff;
+            color: #8b6f47;
             font-style: italic;
         }
         
         h2 {
             font-size: 2em;
-            color: #ffd700;
+            color: #c9a227;
             margin: 40px 0 20px 0;
             text-align: center;
         }
         
         h3 {
             font-size: 1.5em;
-            color: #00d4ff;
+            color: #8b6f47;
             margin: 30px 0 15px 0;
         }
         
         .card {
-            background: rgba(255,255,255,0.05);
+            background: #ffffff;
             border-radius: 15px;
             padding: 30px;
             margin: 20px 0;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s ease;
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .card:hover {
             transform: translateY(-5px);
-            border-color: rgba(255,215,0,0.3);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.15);
         }
         
         .testimonial {
-            background: rgba(0,212,255,0.1);
-            border-left: 4px solid #00d4ff;
+            background: linear-gradient(135deg, #fff9f5 0%, #ffe8d6 100%);
+            border-left: 4px solid #c9a227;
             padding: 20px;
             margin: 20px 0;
             border-radius: 0 10px 10px 0;
@@ -86,11 +85,12 @@
         .testimonial p {
             font-style: italic;
             font-size: 1.1em;
+            color: #5a5a5a;
         }
         
         .testimonial .author {
             text-align: right;
-            color: #ffd700;
+            color: #c9a227;
             margin-top: 10px;
             font-weight: bold;
         }
@@ -103,8 +103,8 @@
         }
         
         .stat-box {
-            background: rgba(255,215,0,0.1);
-            border: 2px solid #ffd700;
+            background: linear-gradient(135deg, #fff9f5 0%, #ffe8d6 100%);
+            border: 2px solid #c9a227;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
@@ -112,52 +112,54 @@
         
         .stat-number {
             font-size: 2.5em;
-            color: #ffd700;
+            color: #c9a227;
             font-weight: bold;
         }
         
         .stat-label {
-            color: #a0a0a0;
+            color: #8b6f47;
             font-size: 0.9em;
         }
         
         .pricing-tier {
-            background: rgba(255,255,255,0.05);
-            border: 2px solid rgba(255,215,0,0.3);
+            background: #ffffff;
+            border: 2px solid rgba(201, 162, 39, 0.2);
             border-radius: 15px;
             padding: 30px;
             margin: 20px 0;
             text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
         
         .pricing-tier.featured {
-            border-color: #ffd700;
-            background: rgba(255,215,0,0.1);
+            border-color: #c9a227;
+            background: linear-gradient(135deg, #fff9f5 0%, #ffe8d6 100%);
             transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.15);
         }
         
         .tier-name {
             font-size: 1.8em;
-            color: #ffd700;
+            color: #c9a227;
             margin-bottom: 10px;
         }
         
         .tier-price {
             font-size: 2.5em;
-            color: #00d4ff;
+            color: #8b6f47;
             font-weight: bold;
             margin: 15px 0;
         }
         
         .tier-description {
-            color: #a0a0a0;
+            color: #8b6f47;
             margin-bottom: 20px;
         }
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            color: #1a1a2e;
+            background: linear-gradient(135deg, #c9a227 0%, #d4b43a 100%);
+            color: #ffffff;
             padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
@@ -169,17 +171,17 @@
         
         .btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
         }
         
         .btn-secondary {
             background: transparent;
-            border: 2px solid #00d4ff;
-            color: #00d4ff;
+            border: 2px solid #8b6f47;
+            color: #8b6f47;
         }
         
         .btn-secondary:hover {
-            background: rgba(0,212,255,0.1);
+            background: rgba(139, 111, 71, 0.1);
         }
         
         .features {
@@ -197,20 +199,22 @@
         
         .features li:before {
             content: "✓";
-            color: #00d4ff;
+            color: #c9a227;
             font-weight: bold;
             margin-right: 10px;
         }
         
         .objection {
-            background: rgba(255,255,255,0.03);
+            background: #ffffff;
             border-radius: 10px;
             padding: 20px;
             margin: 15px 0;
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
         }
         
         .objection strong {
-            color: #ffd700;
+            color: #c9a227;
             display: block;
             margin-bottom: 10px;
         }
@@ -218,15 +222,15 @@
         .cta-section {
             text-align: center;
             padding: 60px 20px;
-            background: rgba(255,215,0,0.05);
+            background: linear-gradient(135deg, #fff9f5 0%, #ffe8d6 100%);
             border-radius: 20px;
             margin: 40px 0;
-            border: 2px solid rgba(255,215,0,0.3);
+            border: 2px solid rgba(201, 162, 39, 0.2);
         }
         
         .guarantee {
-            background: rgba(0,212,255,0.1);
-            border: 2px solid #00d4ff;
+            background: linear-gradient(135deg, #fff9f5 0%, #ffe8d6 100%);
+            border: 2px solid #c9a227;
             border-radius: 15px;
             padding: 30px;
             text-align: center;
@@ -236,8 +240,8 @@
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #666;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #8b6f47;
+            border-top: 1px solid rgba(201, 162, 39, 0.2);
             margin-top: 40px;
         }
         
@@ -255,31 +259,31 @@
         <div class="hero">
             <h1>The OpenClaw Edge</h1>
             <p class="subtitle">Work Smarter. Grow Stronger. Win Sooner.</p>
-            <p style="font-size: 1.2em; margin-top: 20px; color: #a0a0a0;">The businesses pulling ahead are not doing more manually.<br>They're using AI to create speed, leverage, and momentum.</p>
-            <p style="font-size: 1.1em; margin-top: 15px; color: #00d4ff;"><em>Built for women entrepreneurs, by women entrepreneurs.</em></p>
-            <p style="font-size: 1.3em; margin-top: 20px; color: #ffd700;"><strong>Now it's your move.</strong></p>
+            <p style="font-size: 1.2em; margin-top: 20px; color: #5a5a5a;">The businesses pulling ahead are not doing more manually.<br>They're using AI to create speed, leverage, and momentum.</p>
+            <p style="font-size: 1.1em; margin-top: 15px; color: #8b6f47;"><em>Built for women entrepreneurs, by women entrepreneurs.</em></p>
+            <p style="font-size: 1.3em; margin-top: 20px; color: #c9a227;"><strong>Now it's your move.</strong></p>
         </div>
 
         <!-- THE UNCOMFORTABLE TRUTH -->
         <div class="card">
             <h2>The Uncomfortable Truth About Building a Business After 60</h2>
             <p>You've spent decades mastering your craft. You know your industry inside and out. You've helped people, solved problems, and built a reputation that means something.</p>
-            <p><strong style="color: #ffd700;">But here's what nobody tells you:</strong></p>
+            <p><strong style="color: #c9a227;">But here's what nobody tells you:</strong></p>
             <p>The game has changed. The rules you learned—the ones that worked for thirty years—aren't the rules anymore.</p>
             <p>While you've been perfecting your expertise, the world has been quietly rewriting how business actually gets done. And right now, there's a widening gap between the women who see it and the women who don't.</p>
             <p>On one side: The entrepreneurs still doing everything manually. Still spending weekends catching up on admin. Still trading hours for dollars. Still wondering why their business feels like it's running them instead of the other way around.</p>
             <p>On the other side: The operators who've figured out that AI isn't the future—it's the present. They're building faster, scaling smarter, and reclaiming their time while their competition is still trying to figure out which software to buy.</p>
-            <p><strong style="color: #ffd700;">This isn't about becoming a tech person.</strong></p>
+            <p><strong style="color: #c9a227;">This isn't about becoming a tech person.</strong></p>
             <p>This is about becoming the kind of business owner who doesn't get left behind.</p>
         </div>
 
         <!-- YOU'RE WORKING HARDER -->
         <div class="card">
             <h2>You're Working Harder Than Ever.<br>But Something's Not Clicking.</h2>
-            <p><strong style="color: #ffd700;">What you need now isn't more effort — it's leverage.</strong></p>
+            <p><strong style="color: #c9a227;">What you need now isn't more effort — it's leverage.</strong></p>
             <p>You're juggling everything—content, sales, operations, customer service—and somehow, there's still never enough time. You're stretched thin, constantly switching hats, and wondering why building a business still feels so heavy.</p>
             <p>You've taken the courses. Bought the templates. Followed the "proven systems." But at the end of the day, you're still the one doing almost everything manually—while the to-do list keeps getting longer.</p>
-            <p><strong style="color: #ffd700;">Here's the truth: the women pulling ahead in business right now are not working harder. They're using AI to work smarter.</strong></p>
+            <p><strong style="color: #c9a227;">Here's the truth: the women pulling ahead in business right now are not working harder. They're using AI to work smarter.</strong></p>
             <p>While you're spending hours trying to write one email sequence, they're creating faster, refining quicker, and moving with more consistency. While you're struggling to keep up with content, they're building momentum with systems that save time and create leverage.</p>
         </div>
 
@@ -292,11 +296,11 @@
         <!-- PATRICIA'S BIO -->
         <div class="card">
             <h2>Hi, I'm Patricia.</h2>
-            <p><strong style="color: #ffd700;">I built this because I needed it.</strong></p>
+            <p><strong style="color: #c9a227;">I built this because I needed it.</strong></p>
             <p>After years of building business the hard way — grinding, hustling, and doing far too much manually — I found OpenClaw and the power of AI. It changed the way I worked, the way I built, and what I believed was possible.</p>
             <p>I went from feeling stretched thin and overwhelmed to more clear, more focused, and more in control. And I realized women entrepreneurs needed a better pathway to use this technology — without the tech overwhelm.</p>
             <p>That's why I created Sister Wealth Creators and The OpenClaw Edge. Not just to teach AI, but to help women use it to build smarter, move faster, and create something real.</p>
-            <p><strong style="color: #ffd700;">We're not tech bros.<br>We're women who get it.<br>And we're here to help you win.</strong></p>
+            <p><strong style="color: #c9a227;">We're not tech bros.<br>We're women who get it.<br>And we're here to help you win.</strong></p>
         </div>
 
         <!-- 3 BENEFIT BOXES -->
@@ -424,10 +428,10 @@
                 <li>Women who need structure, momentum, and a smarter path forward</li>
             </ul>
             
-            <p style="color: #a0a0a0; font-style: italic; margin: 20px 0;"><strong>The promise:</strong> A supported 6-month business-building journey that helps you create something real with more speed, clarity, and AI leverage — without trying to figure it all out alone.</p>
+            <p style="color: #8b6f47; font-style: italic; margin: 20px 0;"><strong>The promise:</strong> A supported 6-month business-building journey that helps you create something real with more speed, clarity, and AI leverage — without trying to figure it all out alone.</p>
             
             <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join the Build Lab — $497 Setup</a>
-            <p style="font-size: 0.9em; color: #a0a0a0; margin-top: 10px;">Then $67/month: <a href="https://buy.stripe.com/28E5kEeeUeV5fz40cm6oo01" style="color: #00d4ff;">Monthly Subscription</a></p>
+            <p style="font-size: 0.9em; color: #a0a0a0; margin-top: 10px;">Then $67/month: <a href="https://buy.stripe.com/28E5kEeeUeV5fz40cm6oo01" style="color: #8b6f47;">Monthly Subscription</a></p>
         </div>
 
         <!-- PLATINUM PATH -->
@@ -442,7 +446,7 @@
                 <li>Accelerated growth path</li>
                 <li>Priority guidance on your first custom skills</li>
             </ul>
-            <p style="color: #a0a0a0; font-style: italic; margin: 20px 0;"><strong>Best for:</strong> Women ready to think bigger, learn faster, and build with more leverage.</p>
+            <p style="color: #8b6f47; font-style: italic; margin: 20px 0;"><strong>Best for:</strong> Women ready to think bigger, learn faster, and build with more leverage.</p>
             <a href="mailto:support@sisterwealthcreators.com?subject=Platinum%20Path%20Application" class="btn btn-secondary">Apply for the Platinum Path</a>
         </div>
 
@@ -451,13 +455,13 @@
             <h2>Which Scene Do You Want?</h2>
             <p><strong>Scene One: Six Months From Now, Without The OpenClaw Edge</strong></p>
             <p>It's 6:47 PM on a Thursday. You've been at your desk since 8 AM. Your back hurts. Your eyes are strained. Your dinner is getting cold. You're still not done.</p>
-            <p style="color: #a0a0a0; font-style: italic;">You feel old. You feel behind. You feel alone.</p>
+            <p style="color: #8b6f47; font-style: italic;">You feel old. You feel behind. You feel alone.</p>
             
             <p style="margin-top: 30px;"><strong>Scene Two: Six Months From Now, With The OpenClaw Edge</strong></p>
             <p>It's 2:30 PM on a Thursday. You just got back from a long lunch with a potential strategic partner. The conversation was energizing. Three new leads came in while you were at lunch—already qualified and nurtured by your AI systems.</p>
-            <p style="color: #ffd700; font-style: italic;">You feel sharp. You feel in control. You feel like the best years of your business are still ahead of you.</p>
+            <p style="color: #c9a227; font-style: italic;">You feel sharp. You feel in control. You feel like the best years of your business are still ahead of you.</p>
             
-            <p style="font-size: 1.3em; color: #ffd700; margin: 30px 0;"><strong>Which scene do you want?</strong></p>
+            <p style="font-size: 1.3em; color: #c9a227; margin: 30px 0;"><strong>Which scene do you want?</strong></p>
             <p>The choice is yours. But the window to choose is closing.</p>
         </div>
 
@@ -473,7 +477,7 @@
         <footer>
             <p><strong>The OpenClaw Edge by Sister Wealth Creators</strong></p>
             <p>Building the Future, Together</p>
-            <p style="margin-top: 20px;">Questions? Email us at <a href="mailto:support@sisterwealthcreators.com" style="color: #00d4ff;">support@sisterwealthcreators.com</a></p>
+            <p style="margin-top: 20px;">Questions? Email us at <a href="mailto:support@sisterwealthcreators.com" style="color: #8b6f47;">support@sisterwealthcreators.com</a></p>
             <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
                 <strong>P.S.</strong> — Every day you wait is a day you're choosing to work harder instead of smarter. The AI revolution isn't coming. It's here. The only question is whether you're going to be on the right side of it.<br><br>
                 <strong>P.P.S.</strong> — Remember, you have 30 days to try this risk-free. If it doesn't transform your business, you get your money back. But if it does? You'll look back on this moment as the day everything changed.
