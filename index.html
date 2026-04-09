@@ -19,7 +19,7 @@
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -27,50 +27,105 @@
         /* HERO */
         .hero {
             text-align: center;
+            padding: 80px 20px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            color: #2c2c2c;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .hero-text {
+            font-size: 1.2em;
+            color: #5a5a5a;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+        }
+        
+        .hero-tagline {
+            font-size: 1.1em;
+            color: #8a8a8a;
+            font-style: italic;
+            margin: 30px 0;
+        }
+        
+        .hero-cta {
+            font-size: 1.3em;
+            color: #c9a227;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+        
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            background: #c9a227;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #b89420;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #c9a227;
+            color: #c9a227;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(201, 162, 39, 0.1);
+        }
+        
+        /* SECTIONS */
+        .section {
             padding: 60px 20px;
             max-width: 800px;
             margin: 0 auto;
         }
         
-        .hero-pretitle {
-            font-size: 1em;
-            color: #c9a227;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-        }
-        
-        h1 {
-            font-size: 3.2em;
-            color: #2c2c2c;
-            margin-bottom: 15px;
-            font-weight: 400;
-        }
-        
-        .hero-headline {
+        h2 {
             font-size: 1.9em;
-            color: #5a5a5a;
-            margin-bottom: 20px;
-            font-weight: 300;
+            color: #2c2c2c;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 400;
             line-height: 1.4;
         }
         
-        .hero-description {
-            font-size: 1.15em;
-            color: #6a6a6a;
-            max-width: 650px;
-            margin: 0 auto 25px;
+        h3 {
+            font-size: 1.4em;
+            color: #c9a227;
+            margin: 30px 0 15px;
+            font-weight: 600;
         }
         
-        .hero-cta {
-            font-size: 1.25em;
+        p {
+            margin-bottom: 20px;
+            color: #5a5a5a;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .highlight {
             color: #c9a227;
             font-weight: 600;
         }
         
-        /* PRICING - 3 SMALL BOXES SIDE BY SIDE */
+        /* PRICING */
         .pricing-section {
-            margin: 50px 0;
+            padding: 40px 20px;
         }
         
         .pricing-container {
@@ -78,59 +133,45 @@
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
         
         .pricing-box {
             background: #ffffff;
-            border-radius: 12px;
-            padding: 35px 25px;
-            width: 320px;
+            border-radius: 15px;
+            padding: 40px 30px;
+            width: 280px;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            position: relative;
         }
         
         .pricing-box.featured {
             border: 2px solid #c9a227;
-            transform: scale(1.03);
-        }
-        
-        .popular-tag {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #c9a227;
-            color: white;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-weight: 600;
-            letter-spacing: 1px;
+            transform: scale(1.02);
         }
         
         .tier-name {
-            font-size: 1.4em;
+            font-size: 1.3em;
             color: #2c2c2c;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
         
         .tier-price {
-            font-size: 2.4em;
+            font-size: 2.2em;
             color: #c9a227;
             font-weight: 700;
             margin: 15px 0 5px;
         }
         
         .tier-price-note {
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #8a8a8a;
             margin-bottom: 15px;
         }
         
         .tier-description {
-            color: #5a5a5a;
+            color: #6a6a6a;
             font-size: 0.95em;
             margin-bottom: 20px;
             line-height: 1.5;
@@ -157,69 +198,14 @@
             margin-right: 8px;
         }
         
-        .btn {
-            display: inline-block;
-            background: #c9a227;
-            color: white;
-            padding: 12px 35px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1em;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: #b89420;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid #c9a227;
-            color: #c9a227;
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(201, 162, 39, 0.1);
-        }
-        
-        .tagline {
-            text-align: center;
+        .best-for {
             color: #8a8a8a;
-            margin: 40px 0 30px;
-            font-size: 1em;
-            letter-spacing: 1px;
+            font-size: 0.9em;
+            font-style: italic;
+            margin: 15px 0;
         }
         
-        /* CONTENT SECTIONS */
-        .section {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        
-        h2 {
-            font-size: 2em;
-            color: #2c2c2c;
-            margin-bottom: 25px;
-            text-align: center;
-            font-weight: 400;
-        }
-        
-        p {
-            margin-bottom: 20px;
-            color: #5a5a5a;
-            font-size: 1.05em;
-        }
-        
-        .highlight {
-            color: #c9a227;
-            font-weight: 600;
-        }
-        
-        /* BENEFIT BOXES */
+        /* BENEFITS */
         .benefits-container {
             display: flex;
             justify-content: center;
@@ -230,32 +216,27 @@
         
         .benefit-box {
             background: #ffffff;
-            border-radius: 12px;
-            padding: 35px 30px;
-            width: 300px;
+            border-radius: 15px;
+            padding: 35px 25px;
+            width: 260px;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
         }
         
-        .benefit-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-        
         .benefit-title {
             font-size: 1.2em;
-            color: #2c2c2c;
-            margin-bottom: 12px;
+            color: #c9a227;
+            margin-bottom: 15px;
             font-weight: 600;
         }
         
         .benefit-description {
-            color: #6a6a6a;
+            color: #5a5a5a;
             font-size: 0.95em;
             line-height: 1.6;
         }
         
-        /* BIO SECTION */
+        /* BIO */
         .bio-section {
             background: #ffffff;
             border-radius: 15px;
@@ -277,61 +258,42 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
+        .bio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
         .bio-content {
             flex: 1;
         }
         
-        .bio-pretitle {
-            color: #8a8a8a;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-        
         .bio-title {
-            font-size: 1.8em;
+            font-size: 1.7em;
             color: #2c2c2c;
             margin-bottom: 20px;
             font-weight: 400;
-        }
-        
-        .bio-text {
-            color: #5a5a5a;
-            margin-bottom: 15px;
-            line-height: 1.7;
+            line-height: 1.4;
         }
         
         .bio-closing {
             color: #c9a227;
             font-weight: 600;
             font-size: 1.1em;
-            margin-top: 20px;
+            margin-top: 25px;
+            line-height: 1.6;
         }
         
-        /* CTA SECTION */
-        .cta-section {
+        /* FINAL CTA */
+        .final-cta {
             text-align: center;
             padding: 60px 20px;
-            margin: 60px 0;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .cta-title {
-            font-size: 1.8em;
-            color: #2c2c2c;
-            margin-bottom: 20px;
-        }
-        
-        .cta-text {
-            color: #6a6a6a;
-            max-width: 600px;
-            margin: 0 auto 30px;
-            font-size: 1.05em;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+        .final-cta h2 {
+            margin-bottom: 30px;
         }
         
         /* FOOTER */
@@ -340,7 +302,6 @@
             padding: 50px 20px;
             color: #8a8a8a;
             border-top: 1px solid #e8e8e8;
-            margin-top: 60px;
         }
         
         footer a {
@@ -349,32 +310,13 @@
         }
         
         /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .pricing-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .pricing-box {
-                width: 100%;
-                max-width: 400px;
-            }
-            
-            .pricing-box.featured {
-                transform: scale(1);
-            }
-            
-            .bio-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .bio-image {
-                margin: 0 auto;
-            }
-            
-            h1 { font-size: 2.4em; }
-            .hero-headline { font-size: 1.5em; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.6em; }
+            .pricing-container { flex-direction: column; align-items: center; }
+            .pricing-box { width: 100%; max-width: 350px; }
+            .bio-section { flex-direction: column; text-align: center; }
+            .bio-image { margin: 0 auto; }
         }
     </style>
 </head>
@@ -382,130 +324,130 @@
     <div class="container">
         <!-- HERO -->
         <div class="hero">
-            <p class="hero-pretitle">✨ Sister Wealth Creators Presents ✨</p>
-            <h1>The OpenClaw Edge</h1>
-            <p class="hero-headline">The Edge Isn't Extra Anymore.<br>It's Essential.</p>
-            <p class="hero-description">OpenClaw EDGE gives women entrepreneurs the AI advantage to build faster, think clearer, and scale smarter.</p>
-            <p class="hero-cta">So you STOP working harder—and start WINNING bigger.</p>
+            <h1>Work Smarter. Grow Stronger. Win Sooner.</h1>
+            <p class="hero-text">The businesses pulling ahead are not doing more manually. They're using AI to create speed, consistency, and leverage.</p>
+            <p class="hero-text"><strong>That's the OpenClaw Edge.</strong></p>
+            <p class="hero-tagline">Built for women entrepreneurs, by women entrepreneurs.</p>
+            <p class="hero-cta">Now it's your turn.</p>
+            <a href="#pricing" class="btn">Choose Your Edge</a>
         </div>
-
-        <!-- PRICING - 3 SMALL BOXES SIDE BY SIDE -->
-        <div class="pricing-section">
-            <div class="pricing-container">
-                <!-- TOUCH-UP -->
-                <div class="pricing-box">
-                    <div class="tier-name">The Touch-Up</div>
-                    <div class="tier-price">$297</div>
-                    <p class="tier-description">Perfect if you need strategic improvements to your existing business</p>
-                    <ul class="features">
-                        <li>Focused strategy session</li>
-                        <li>Business & workflow review</li>
-                        <li>AI-powered recommendations</li>
-                        <li>Clear positioning strategies</li>
-                        <li>Actionable next steps</li>
-                        <li>Up to 5 skills done for you</li>
-                    </ul>
-                    <a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" class="btn">Get Started</a>
-                </div>
-
-                <!-- BUILD LAB -->
-                <div class="pricing-box featured">
-                    <div class="popular-tag">MOST POPULAR</div>
-                    <div class="tier-name">The Build Lab</div>
-                    <div class="tier-price">$497</div>
-                    <p class="tier-price-note">+ $67/mo</p>
-                    <p class="tier-description">Build or grow your business with ongoing support & AI guidance</p>
-                    <ul class="features">
-                        <li>Everything in Touch-Up, plus:</li>
-                        <li>Monthly community access</li>
-                        <li>AI training & prompts</li>
-                        <li>Ongoing support</li>
-                        <li>Accountability & momentum</li>
-                        <li>Practical business strategies</li>
-                        <li>10-20 skills done for you</li>
-                    </ul>
-                    <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join The Lab</a>
-                </div>
-
-                <!-- PREMIUM -->
-                <div class="pricing-box">
-                    <div class="tier-name">Premium Path</div>
-                    <div class="tier-price" style="font-size: 2em; padding: 10px 0;">Apply</div>
-                    <p class="tier-description">Maximum customization and speed for serious growth</p>
-                    <ul class="features">
-                        <li>Everything in Build Lab, plus:</li>
-                        <li>High-touch personalized support</li>
-                        <li>Customized strategy</li>
-                        <li>Done-with-you implementation</li>
-                        <li>Premium resources</li>
-                        <li>Accelerated growth path</li>
-                        <li>Unlimited skills done for you</li>
-                    </ul>
-                    <a href="mailto:support@sisterwealthcreators.com?subject=Premium%20Path%20Application" class="btn btn-secondary">Book a Call</a>
-                </div>
-            </div>
-        </div>
-
-        <p class="tagline">⚡ Instant Access • 3 Tiers for Every Stage • Built for Women Entrepreneurs</p>
 
         <!-- YOU'RE WORKING HARDER -->
         <div class="section">
             <h2>You're Working Harder Than Ever.<br>But Something's Not Clicking.</h2>
-            <p><span class="highlight">It's time to stop grinding and start leveraging AI.</span></p>
-            <p>You're juggling everything—content, sales, operations, customer service—and somehow, there's still never enough time. You're exhausted, stretched thin, and secretly wondering if building a business was supposed to be this draining.</p>
-            <p>You've tried the courses. You've bought the templates. You've followed the "proven systems." But at the end of the day, you're still doing 90% of the work manually while your to-do list keeps growing.</p>
-            <p><span class="highlight">Here's the truth: The entrepreneurs winning right now aren't working harder. They're leveraging AI to work smarter.</span></p>
-            <p>While you're spending 4 hours writing one email sequence, they're generating 10 in 20 minutes. While you're struggling to create content consistently, they've built a month's worth in an afternoon.</p>
+            <p>You're juggling everything — content, sales, operations, customer service — and somehow, there's still never enough time. You're stretched thin, constantly switching hats, and wondering why building a business still feels so heavy.</p>
+            <p>You've taken the courses. Bought the templates. Followed the "proven systems." But at the end of the day, you're still the one doing almost everything manually — while the to-do list keeps getting longer.</p>
+            <p><span class="highlight">Here's the truth: the women pulling ahead in business right now are not working harder. They're using AI to work smarter.</span></p>
+            <p>While you're spending hours trying to write one email sequence, they're creating faster, refining quicker, and moving with more consistency. While you're struggling to keep up with content, they're building momentum with systems that save time and create leverage.</p>
+            <p style="font-size: 1.2em; color: #c9a227; font-weight: 600; margin-top: 30px;">What you need now isn't more effort. It's leverage.</p>
         </div>
 
         <!-- MEET THE EDGE -->
         <div class="section">
             <h2>Meet The OpenClaw Edge</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">The business-building pathway that helps women entrepreneurs leverage AI to create more speed, clarity, and competitive advantage—without the tech overwhelm.</p>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">The business-building pathway for women entrepreneurs who are ready to use AI to create more speed, clarity, and competitive advantage — without the tech overwhelm.</p>
             
             <div class="benefits-container">
                 <div class="benefit-box">
-                    <div class="benefit-icon">⚡</div>
                     <div class="benefit-title">Speed & Efficiency</div>
-                    <p class="benefit-description">Accomplish in hours what used to take days. AI becomes your 24/7 business partner, handling the heavy lifting while you focus on strategy.</p>
+                    <p class="benefit-description">Get done in hours what used to take days. Use AI to simplify the work, speed up execution, and free yourself from the constant manual grind.</p>
                 </div>
                 <div class="benefit-box">
-                    <div class="benefit-icon">🎯</div>
                     <div class="benefit-title">Clarity & Focus</div>
-                    <p class="benefit-description">Cut through the noise with AI-powered insights. Make better decisions faster with data-driven recommendations tailored to your business.</p>
+                    <p class="benefit-description">Stop spinning in the noise. Use AI to organize your thinking, sharpen your decisions, and focus on the work that actually moves your business forward.</p>
                 </div>
                 <div class="benefit-box">
-                    <div class="benefit-icon">💎</div>
                     <div class="benefit-title">Competitive Edge</div>
-                    <p class="benefit-description">Stay ahead of the curve. While others struggle with manual processes, you'll be operating at the speed of modern business.</p>
+                    <p class="benefit-description">The businesses pulling ahead are not doing more by hand. They're using AI to create speed, consistency, and leverage — and now you can too.</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-section">
-            <h2 class="cta-title">Your Edge Is Waiting</h2>
-            <p class="cta-text">Choose the path that fits where you are right now. Each tier is designed to meet you exactly where you are and take you where you want to go.</p>
-            <div class="cta-buttons">
-                <a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" class="btn">Start With Touch-Up — $297</a>
-                <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join Build Lab — $497</a>
-                <a href="mailto:support@sisterwealthcreators.com?subject=Premium%20Path%20Application" class="btn btn-secondary">Apply for Premium</a>
             </div>
         </div>
 
         <!-- PATRICIA'S BIO -->
         <div class="bio-section">
             <div class="bio-image">
-                <img src="patricia-photo.jpg" alt="Patricia Lapena" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <img src="patricia-photo.jpg" alt="Patricia Lapena">
             </div>
             <div class="bio-content">
-                <p class="bio-pretitle">Patricia Lapena - Founder of Sister Wealth Creators</p>
-                <h2 class="bio-title">Hi, I'm Patricia.<br>I Built This Because I Needed It.</h2>
-                <p class="bio-text">After years of building businesses the hard way—grinding, hustling, doing everything manually—I discovered OpenClaw and AI. And it changed everything.</p>
-                <p class="bio-text">I went from working 60+ hour weeks to accomplishing more in 20 hours. I went from overwhelmed to in control. And I realized that women entrepreneurs like us needed a pathway to leverage this technology—without the tech overwhelm.</p>
-                <p class="bio-text">That's why I created Sister Wealth Creators and The OpenClaw Edge. Not just to teach you AI, but to walk alongside you as you build something extraordinary.</p>
-                <p class="bio-closing">We're not tech bros. We're women who get it. And we're here to help you win.</p>
+                <div class="bio-title">Hi, I'm Patricia.<br>I Built This Because I Needed It.</div>
+                <p>After years of building business the hard way — grinding, hustling, and doing far too much manually — I found OpenClaw and the power of AI. It changed the way I worked, the way I built, and what I believed was possible.</p>
+                <p>I went from feeling stretched thin and overwhelmed to more clear, more focused, and more in control. And I realized women entrepreneurs needed a better pathway to use this technology — without the tech overwhelm.</p>
+                <p>That's why I created Sister Wealth Creators and The OpenClaw Edge. Not just to teach AI, but to help women use it to build smarter, move faster, and create something real.</p>
+                <div class="bio-closing">We're not tech bros.<br>We're women who get it.<br>And we're here to help you win.</div>
             </div>
+        </div>
+
+        <!-- PRICING -->
+        <div class="pricing-section" id="pricing">
+            <h2>Choose Your Edge</h2>
+            <p style="text-align: center; color: #6a6a6a; margin-bottom: 40px;">Pick the path that fits where you are now — and build from there.</p>
+            
+            <div class="pricing-container">
+                <!-- TOUCH-UP -->
+                <div class="pricing-box">
+                    <div class="tier-name">The Touch-Up</div>
+                    <div class="tier-price">$297</div>
+                    <p class="tier-description">Perfect for women who already have a business and want smarter systems, less manual work, and a few high-impact AI improvements.</p>
+                    <ul class="features">
+                        <li>60-minute Zoom strategy session</li>
+                        <li>Business and workflow review</li>
+                        <li>Clear AI recommendations</li>
+                        <li>Up to 5 custom skills installed for you</li>
+                        <li>Call recording included</li>
+                        <li>Delivered within a few days</li>
+                    </ul>
+                    <p class="best-for">Best for: tweaking and improving an existing business</p>
+                    <a href="https://buy.stripe.com/eVqbJ23Ag3cncmS1gq6oo03" class="btn">Get the Touch-Up</a>
+                </div>
+
+                <!-- BUILD LAB -->
+                <div class="pricing-box featured">
+                    <div class="tier-name">The Build Lab</div>
+                    <div class="tier-price">$497</div>
+                    <p class="tier-price-note">+ $67/month</p>
+                    <p class="tier-description">Build your business with AI support, smart systems, and ongoing momentum.</p>
+                    <ul class="features">
+                        <li>90-minute kickoff strategy session</li>
+                        <li>First 5–10 custom skills installed</li>
+                        <li>Monthly community access</li>
+                        <li>AI training, prompts, and practical guidance</li>
+                        <li>Ongoing support and accountability</li>
+                        <li>Up to 10 additional skills over your 6-month journey</li>
+                        <li>Build roadmap included</li>
+                    </ul>
+                    <p class="best-for">Best for: women starting from scratch or building something bigger<br>6-month minimum</p>
+                    <a href="https://buy.stripe.com/bJe4gAc6MfZ9gD84sC6oo02" class="btn">Join the Build Lab</a>
+                </div>
+
+                <!-- PREMIUM -->
+                <div class="pricing-box">
+                    <div class="tier-name">The Premium Path</div>
+                    <div class="tier-price" style="font-size: 1.8em; padding: 15px 0;">Apply</div>
+                    <p class="tier-description">For women who are ready to own OpenClaw for themselves, learn the skills firsthand, and explore the bigger opportunity this platform can create.</p>
+                    <ul class="features">
+                        <li>Personal call and brainstorm session</li>
+                        <li>Video walkthroughs to see the bigger picture</li>
+                        <li>Help choosing the right OpenClaw level for your goals</li>
+                        <li>Accelerated growth path</li>
+                        <li>Priority guidance on your first custom skills</li>
+                    </ul>
+                    <p class="best-for">Best for: women ready to think bigger, learn faster, and build with more leverage</p>
+                    <a href="mailto:support@sisterwealthcreators.com?subject=Premium%20Path%20Application" class="btn btn-secondary">Apply for the Premium Path</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FINAL CTA -->
+        <div class="final-cta">
+            <h2>This Is Bigger Than AI</h2>
+            <p>This is about building a business with more speed, more leverage, and more possibility.</p>
+            <p>It's about stopping the endless manual grind and stepping into a smarter way to work. It's about using the right tools to create momentum, sharpen your business, and move forward with confidence.</p>
+            <p>The OpenClaw Edge is part of a bigger movement through Sister Wealth Creators — helping women build smarter businesses with the tools, support, and edge they need now.</p>
+            <p style="font-size: 1.1em; margin: 30px 0;"><strong>You do not need to figure this out alone.<br>You do not need to stay stuck in the hard way.<br>And you do not need more hustle to win.</strong></p>
+            <p style="font-size: 1.3em; color: #c9a227; font-weight: 600; margin: 30px 0;">You need the right edge.</p>
+            <p style="font-size: 1.4em; color: #2c2c2c; font-weight: 600; margin-top: 40px;">Ready to Build Smarter?</p>
+            <p style="color: #6a6a6a; margin-bottom: 30px;">Whether you need a few strategic improvements, a guided business-building path, or want to step into the bigger OpenClaw opportunity, there's a next step for you here.</p>
+            <p style="font-size: 1.3em; color: #c9a227; font-weight: 600;">Work smarter. Grow stronger. Win sooner.</p>
         </div>
 
         <!-- FOOTER -->
